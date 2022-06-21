@@ -5,12 +5,10 @@ import java.util.Formatter;
 public class Test {
 	private static int counter = 1;
 	private static int successes = 0;
-	private static String log = "";
 	
 	public static void reset() {
 		counter = 1;
 		successes = 0;
-		log = "";
 	}
 	
 	public static void isNull(Object a) {
@@ -29,11 +27,17 @@ public class Test {
 	}
 	
 	public static void equals(Object a, Object b) {
-		boolean success = a.equals(b);
-		System.out.printf("Test %4d: %s - %s %s %s\n", counter, success ? "SUCCESS" : "FAILURE", a.toString(), success ? "=" : "!=", b.toString());
+		boolean success;
+		if(a == null || b == null)
+			success = false;
+		else 
+			success = a.equals(b);
+		
+		System.out.printf("Test %4d: %s - %s %s %s\n", counter, success ? "SUCCESS" : "FAILURE", (a == null ? "(NULL)" : a.toString()), success ? "=" : "!=", (b == null ? "(NULL)" : b.toString()));
 		increment(success);
 	}
 	
+	//matrix equality
 	public static void equals(int[][] m1, int[][]m2) {
 		boolean success = true;
 		
@@ -68,7 +72,7 @@ public class Test {
 			System.out.printf("%d tests failed...\n\n", nTests - successes);
 	}
 	
-	public static void logp(int[][] matrix) {
+	public static void log(int[][] matrix) {
 		StringBuilder sb = new StringBuilder();
 		
 		for(int x = 0; x < matrix.length; x++) {
@@ -80,26 +84,15 @@ public class Test {
 			sb.append("\n");
 		}
 		
-		logp(sb.toString());
-	}
-	
-	public static void logp(String s) {
-		System.out.println(s);
-		log(s);
-	}
-	
-	public static void logp(Object o) {
-		logp(o.toString());
+		log(sb.toString());
 	}
 	
 	public static void log(String s) {
-		log += "s" + "\n";
+		System.out.println(s);
 	}
 	
-	public static void printLog() {
-		System.out.println("-----");
-		System.out.println(log);
-		System.out.println("-----");
+	public static void log(Object o) {
+		log(o.toString());
 	}
 	
 	public static void header() {

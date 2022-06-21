@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import ds.BNode;
+import datastructures.BNode;
 import testing.Test;
 
 public class RemoveDuplicates {
