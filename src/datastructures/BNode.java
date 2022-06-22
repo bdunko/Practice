@@ -21,6 +21,17 @@ public class BNode<E> {
 		this.prev = prev;
 	}
 	
+	//Returns the length of the list starting at this node
+	public int length() {
+		BNode<E> runner = this;
+		int length = 0;
+		while(runner != null) {
+			runner = runner.next;
+			length++;
+		}
+		return length;
+	}
+	
 	@Override
 	public String toString() {
 		return new StringBuilder().append("(").append(elem.toString()).append(")").toString();
@@ -138,6 +149,11 @@ public class BNode<E> {
 		Test.header("listToString");
 		Test.equals(BNode.listToString(null), "[]");
 		Test.equals(BNode.listToString(list), "[(one)-(two)-(three)-(four)-(five)]");
+		
+		Test.header("length");
+		Test.equals(createList(List.of(1, 2, 3, 4, 5)).length(), 5);
+		Test.equals(createList(List.of(1, 2)).length(), 2);
+		Test.equals(createList(List.of(1)).length(), 1);
 		
 		Test.results();
 	}

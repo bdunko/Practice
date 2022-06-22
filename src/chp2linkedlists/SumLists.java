@@ -58,6 +58,22 @@ public class SumLists {
 		BNode<Integer> answerHead = null;
 		BNode<Integer> answerTail = null;
 		
+		//if one of the lists is shorter than the other, we must pad with 0s in front
+		int length1 = list1.length();
+		int length2 = list2.length();
+		while(length1 > length2) {
+			list2.prev = new BNode<Integer>(0);
+			list2.prev.next = list2;
+			list2 = list2.prev;
+			length2++;
+		}
+		while(length2 > length1) {
+			list1.prev = new BNode<Integer>(0);
+			list1.prev.next = list1;
+			list1 = list1.prev;
+			length1++;
+		}
+		
 		while(list1 != null  || list2 != null) {
 			int elem1 = (list1 == null ? 0 : list1.elem);
 			int elem2 = (list2 == null ? 0 : list2.elem);
@@ -139,8 +155,8 @@ public class SumLists {
 		testCase(List.of(6, 1, 7), List.of(2, 9, 5), List.of(9, 1, 2));
 		testCase(List.of(8), List.of(9), List.of(1, 7));
 		testCase(List.of(1, 5), List.of(2, 6), List.of(4, 1));
-		testCase(List.of(3, 2, 1), List.of(1), List.of(4, 2, 1));
-		testCase(List.of(7, 5), List.of(0, 1), List.of(7, 6));
+		testCase(List.of(3, 2, 1), List.of(1), List.of(3, 2, 2));
+		testCase(List.of(7, 5), List.of(1, 0), List.of(8, 5));
 		testCase(List.of(9, 9, 9), List.of(9, 9, 9), List.of(1, 9, 9, 8));
 		Test.results();
 	}

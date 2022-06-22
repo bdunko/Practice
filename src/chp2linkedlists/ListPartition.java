@@ -50,6 +50,35 @@ public class ListPartition {
 		return lessList;
 	}
 	
+	//Performs the partition with a single linked list.
+	//All elements larger than partition are inserted at back of list
+	//All elements smaller are inserted at front of list
+	//This guarantees the list will end up partitioned.
+	//Time: O(N)	Space: O(N)		Where N is size of list
+	public static <T extends Comparable<T>> BNode<T> partition2(BNode<T> head, T partition) {
+		if(head == null)
+			return null;
+		
+		BNode<T> partitionedFront = new BNode<T>(head.elem);
+		BNode<T> partitionedBack = partitionedFront;
+		head = head.next;
+		
+		while(head != null) {
+			if(head.elem.compareTo(partition) > 0) {
+				partitionedBack.next = new BNode<T>(head.elem);
+				partitionedBack.next.prev = partitionedBack;
+				partitionedBack = partitionedBack.next;
+			} else {
+				partitionedFront.prev = new BNode<T>(head.elem);
+				partitionedFront.prev.next = partitionedFront;
+				partitionedFront = partitionedFront.prev;
+			}
+			head = head.next;
+		}
+		
+		return partitionedFront;
+	}
+	
 	//helper method to verify if a given linked list is partitioned given the partition element
 	private static <T extends Comparable<T>> boolean verifyPartition(BNode<T> head, T partition) {
 		if(head == null)
@@ -96,6 +125,9 @@ public class ListPartition {
 			//partition with random partition
 			int partition = r.nextInt(100);
 			BNode<Integer> partitioned = partition(head, partition);
+			BNode<Integer> partitioned2 = partition2(head, partition);
+			
+			//verify length matches (no elements were lost)
 			BNode<Integer> n = partitioned;
 			int l = 0;
 			while(n != null) {
@@ -104,8 +136,17 @@ public class ListPartition {
 			}
 			Test.equals(length, l);
 			
+			n = partitioned2;
+			l = 0;
+			while(n != null) {
+				l++;
+				n = n.next;
+			}
+			Test.equals(length, l);
+			
 			//verify partition was successful
 			Test.assertion(verifyPartition(partitioned, partition));
+			Test.assertion(verifyPartition(partitioned2, partition));
 		}
 		
 		Test.results();

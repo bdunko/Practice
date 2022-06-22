@@ -31,6 +31,57 @@ public class ListIntersection {
 		return null;
 	}
 	
+	//If lists intersect, they must have the same last element. ex: 1->2->3   4->5->2->3
+	//Walk both lists, recording length. Check if tail of each matches.
+	//If not, no intersection. Otherwise, the intersection is the same distance from the tail of each list
+	//If lists are different sizes, move the longer list forward until the distance to tail is same for both lists. ex: 1->2->3  5->2->3
+	//Now walk both lists until one node matches, that node must be the intersection. ex: return 2
+	//Time: O(N)	Space: O(1)		Where N is length of longer list
+	public static <T> BNode<T> intersectionNoSpace(BNode<T> list1, BNode<T> list2) {
+		BNode<T> n = list1;
+		int list1Length = 0;
+		BNode<T> list1Tail = null;
+		while(n != null) {
+			if(n.next == null)
+				list1Tail = n;
+			list1Length++;
+			n = n.next;
+		}
+		
+		n = list2;
+		int list2Length = 0;
+		BNode<T> list2Tail = null;
+		while(n != null) {
+			if(n.next == null)
+				list2Tail = n;
+			list2Length++;
+			n = n.next;
+		}
+		
+		//if list1Tail != list2Tail, lists do not intersect!
+		if(!list1Tail.equals(list2Tail))
+			return null;
+		
+		//if list1 is longer than list2, move forward until same length
+		while(list1Length > list2Length) {
+			list1 = list1.next;
+			list1Length--;
+		}
+		//if list2 is longer than list1, move forward until same length
+		while(list2Length > list1Length) {
+			list2 = list2.next;
+			list2Length--;
+		}
+		
+		//now walk the list until a node matches. This is the intersection.
+		while(!list1.equals(list2)) {
+			list1 = list1.next;
+			list2 = list2.next;
+		}
+		
+		return list1;
+	}
+	
 	public static void main(String[] args) {
 		Test.header("intersection");
 		BNode<Integer> one = new BNode<Integer>(1);
@@ -41,6 +92,7 @@ public class ListIntersection {
 		BNode<Integer> six = new BNode<Integer>(6);
 		
 		Test.isNull(intersection(one, two));
+		Test.isNull(intersectionNoSpace(one, two));
 		
 		//two non-intersecting lists
 		//list 1		1->2->3->4
@@ -51,16 +103,20 @@ public class ListIntersection {
 		five.next = six;
 		
 		Test.isNull(intersection(one, five));
+		Test.isNull(intersectionNoSpace(one, five));
 		
 		//two intersecting lists 	1->2->3->4->5->6 and 5->6
 		four.next = five;
 		Test.equals(intersection(one, five), five);
+		Test.equals(intersectionNoSpace(one, five), five);
 		
 		//intersection at the end
 		Test.equals(intersection(one, six), six);
+		Test.equals(intersectionNoSpace(one, six), six);
 		
 		//intersection at the head
 		Test.equals(intersection(one, one), one);
+		Test.equals(intersectionNoSpace(one, one), one);
 		
 		Test.results();
 	}

@@ -63,6 +63,18 @@ public class BDeque<T> {
 		size++;
 	}
 	
+	public T peekFront() {
+		if(size == 0)
+			return null;
+		return head.elem;
+	}
+	
+	public T peekBack() {
+		if(size == 0)
+			return null;
+		return tail.elem;
+	}
+	
 	public int size() {
 		return size;
 	}
@@ -108,15 +120,21 @@ public class BDeque<T> {
 		Test.equals(deque.size(), 0);
 		Test.isNull(deque.popBack());
 		Test.isNull(deque.popFront());
+		Test.isNull(deque.peekFront());
+		Test.isNull(deque.peekBack());
 		
-		Test.header("pushFront/pushBack");
+		Test.header("pushFront/pushBack/peekFront/peekBack/popFront/popBack");
 		deque.pushFront(1); // 1
 		deque.pushFront(2); // 2 1
 		deque.pushFront(3); // 3 2 1
 		deque.pushFront(4); // 4 3 2 1
 		Test.equals(deque.size(), 4);
+		Test.equals(deque.peekFront(), 4);
 		Test.equals(deque.popFront(), 4); //3 2 1
+		Test.equals(deque.peekFront(), 3);
+		Test.equals(deque.peekBack(), 1);
 		Test.equals(deque.popBack(), 1); //3 2
+		Test.equals(deque.peekBack(), 2);
 		Test.equals(deque.size(), 2);
 		Test.equals(deque.popFront(), 3); //2
 		Test.equals(deque.popBack(), 2); //(empty)
