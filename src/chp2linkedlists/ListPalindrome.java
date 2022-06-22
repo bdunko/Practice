@@ -5,8 +5,14 @@ import java.util.List;
 import datastructures.BNode;
 import testing.Test;
 
-public class Palindrome {
+//Determine whether a doubly-linked list is a palindrome
+public class ListPalindrome {
 	
+	//First, walk the list until we reach the tail, so we have a head pointer and tail pointer
+	//One at a time, until the pointers cross, check if head = tail.
+	//Then move head up and tail back.
+	//Continue until we've checked length/2 pairs. This handles if the palindrome is odd length.
+	//Time: O(N)	Space: O(1)		Where N is length of list.
 	public static <T> boolean palindrome(BNode<T> list) {
 		if(list == null)
 			return false;

@@ -2,6 +2,7 @@ package datastructures;
 
 import testing.Test;
 
+//Simple stringbuilder implementation
 public class BStringBuilder {
 	
 	private static int RESIZE_FACTOR = 2;

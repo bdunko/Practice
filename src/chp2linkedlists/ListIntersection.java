@@ -6,8 +6,14 @@ import java.util.Set;
 import datastructures.BNode;
 import testing.Test;
 
+//Determine whether two singly linked lists intersect
+//Return the intersecting node
 public class ListIntersection {
 	
+	//Iterate over list1, adding all elements to a HashSet
+	//Iterate over list2, checking if each node is in the set. If it is, this is the point of
+	//intersection and we return it.
+	//Time: O(N)	Space: O(N)		Where N is the length of the longer list
 	public static <T> BNode<T> intersection(BNode<T> list1, BNode<T> list2) {
 		Set<BNode<T>> set = new HashSet<BNode<T>>();
 		

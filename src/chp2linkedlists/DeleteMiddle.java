@@ -5,8 +5,13 @@ import java.util.List;
 import datastructures.BNode;
 import testing.Test;
 
+//Delete a node from a singly-linked list
+//Deny requests to delete head or tail.
 public class DeleteMiddle {
 	
+	//Deletes a middle node by iterating over the list until reaching the node before that node
+	//Then setting the next pointer to the node after the deleted node.
+	//Time: O(N)	Space: O(1)		Where N is length of list
 	public static <T> void deleteMiddle(BNode<T> head, BNode<T> toDelete) {
 		//if trying to delete head
 		if(toDelete == head) 

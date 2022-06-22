@@ -1,8 +1,12 @@
 package chp1arraysstrings;
 
+import testing.Test;
+
+//Rotate a NxN Matrix by 90 degrees to the right.
 public class MatrixRotation {
 	
-	@Deprecated
+	//Matrix rotation using another matrix (not in place)
+	//Time: O(N^2)	Space: O(N^2)	Where the matrix is NxN
 	public static int[][] matrixRotate(int[][] m) {
 		int n = m.length; //matrix guaranteed to be NxN
 		
@@ -17,6 +21,8 @@ public class MatrixRotation {
 		return rotated;
 	}
 	
+	//Matrix rotation in place, by performing a transpose and then vertical mirroring.
+	//Time: O(N^2)	Space: O(1)		Where the matrix is NxN
 	public static int[][] matrixRotateInplace(int[][] m) {
 		//transpose
 		m = matrixTranspose(m);
@@ -27,6 +33,8 @@ public class MatrixRotation {
 		return m;
 	}
 	
+	//Transposes a NxN matrix in place
+	//Time: O(N^2)	Space: O(1)		Where the matrix is NxN
 	public static int[][] matrixTranspose(int[][] m){
 		int n = m.length;
 		
@@ -41,6 +49,8 @@ public class MatrixRotation {
 		return m;
 	}
 	
+	//Vertically mirrors a NxN matrix in place
+	//Time: O(N^2)	Space: O(1)		Where the matrix is NxN
 	public static int[][] matrixMirrorV(int[][] m) {
 		int n = m.length;
 		
@@ -53,16 +63,6 @@ public class MatrixRotation {
 		}
 		
 		return m;
-	}
-	
-	private static void printMatrix(int[][] m) {
-		for(int x = 0; x < m.length; x++) {
-			for(int y = 0; y < m[x].length; y++) {
-				System.out.printf("[%02d]", m[x][y]);
-			}
-			System.out.println();
-		}
-		System.out.println();
 	}
 	
 	public static void main(String[] args) {
@@ -80,8 +80,28 @@ public class MatrixRotation {
 			}
 		}
 		
-		printMatrix(odd);
-		printMatrix(matrixRotate(odd));
-		printMatrix(matrixRotateInplace(odd));
+		int[][] rotationOdd = {
+				{51, 41, 31, 21, 11},
+				{52, 42, 32, 22, 12},
+				{53, 43, 33, 23, 13},
+				{54, 44, 34, 24, 14},
+				{55, 45, 35, 25, 15}
+		};
+		
+		int[][] rotationEven = {
+				{61, 51, 41, 31, 21, 11},
+				{62, 52, 42, 32, 22, 12},
+				{63, 53, 43, 33, 23, 13},
+				{64, 54, 44, 34, 24, 14},
+				{65, 55, 45, 35, 25, 15},
+				{66, 56, 46, 36, 26, 16}
+		};
+		
+		Test.header("matrixRotation");
+		Test.equals(matrixRotate(odd), rotationOdd);
+		Test.equals(matrixRotateInplace(odd), rotationOdd);
+		Test.equals(matrixRotate(even), rotationEven);
+		Test.equals(matrixRotateInplace(even), rotationEven);
+		Test.results();
 	}
 }

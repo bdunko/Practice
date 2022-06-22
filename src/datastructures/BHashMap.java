@@ -5,6 +5,7 @@ import java.util.List;
 
 import testing.Test;
 
+//Generic hashmap implementation
 public class BHashMap<K, V> {
 
 	private class BHashMapEntry {

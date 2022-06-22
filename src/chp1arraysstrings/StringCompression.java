@@ -2,8 +2,12 @@ package chp1arraysstrings;
 
 import testing.Test;
 
+//Compresses a string such that, ex: aabcccccaaa -> a2b1c5a3
+//If the compressed string is the same length or shorter than the original, return the original.
 public class StringCompression {
 	
+	//Performs the string compression using a StringBuilder
+	//Time: O(N)	Space: O(N)		Where N is the length of the string.
 	public static String compress(String s) {
 		if(s.length() == 0)
 			return s;
@@ -35,10 +39,12 @@ public class StringCompression {
 	}
 	
 	public static void main(String[] args) {
+		Test.header("stringCompression");
 		Test.equals(compress("aabcccccaaa"), "a2b1c5a3");
 		Test.equals(compress("abbbbbcddddddaaaa"), "a1b5c1d6a4");
 		Test.equals(compress("abc"), "abc");
 		Test.equals(compress("abcc"), "abcc");
 		Test.equals(compress("abbcccc"), "a1b2c4");
+		Test.results();
 	}
 }

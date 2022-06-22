@@ -2,9 +2,11 @@ package chp1arraysstrings;
 
 import testing.Test;
 
+//Determines whether a string is rotation of another, using only 1 call to isSubstring
 public class StringRotation {
 	
-	//returns if s1 contains s2
+	//Returns if s1 contains s2
+	//Time: O(N)	Space: O(1)		Where N is the length of the longer string (s1)
 	public static boolean isSubstring(String s1, String s2) {
 		if(s1.length() < s2.length() || s2.length() == 0)
 			return false;
@@ -26,6 +28,10 @@ public class StringRotation {
 		return false;
 	}
 	
+	//Determines whether s1 is a rotation of s2 using 1 call to isSubstring
+	//Trick - call isSubstring with s1+s1 as first parameters.
+	//All possible rotations of s1 exist as a substring of s1+s1.
+	//Time: O(N)	Space: O(1)		Where N is length of s1 * 2.
 	public static boolean isRotation(String s1, String s2) {
 		if(s1.length() != s2.length())
 			return false;
@@ -52,7 +58,6 @@ public class StringRotation {
 		Test.assertion(!isSubstring("ABCDE", ""));
 		Test.assertion(!isSubstring("", ""));
 		Test.header("isRotation");
-		
 		Test.assertion(isRotation("waterbottle", "ottlewaterb"));
 		Test.assertion(isRotation("waterbottle", "waterbottle"));
 		Test.assertion(isRotation("waterbottle", "aterbottlew"));
@@ -65,7 +70,6 @@ public class StringRotation {
 		Test.assertion(!isRotation("waterbottle", ""));
 		Test.assertion(!isRotation("waterbottle", "wterbottlea"));
 		Test.assertion(!isRotation("waterbottle", "ottlewaterbb"));
-		
 		Test.results();
 	}
 }

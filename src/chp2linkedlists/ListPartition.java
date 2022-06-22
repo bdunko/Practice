@@ -6,8 +6,15 @@ import java.util.Random;
 import datastructures.BNode;
 import testing.Test;
 
-public class Partition {
+//Partitions a list given a partition element P such that all elements < P come 
+//before all elements > P in the new list.
+public class ListPartition {
 	
+	//Performs the partition by building two new linked lists
+	//One list will contain all elements < P
+	//One list contains all elements > P
+	//Then return the list where lessTail pointers to greaterHead.
+	//Time: O(N)	Space: O(N)		Where N is length of list.
 	public static <T extends Comparable<T>> BNode<T> partition(BNode<T> head, T partition) {
 		BNode<T> lessList = null;
 		BNode<T> less = null;
@@ -43,6 +50,7 @@ public class Partition {
 		return lessList;
 	}
 	
+	//helper method to verify if a given linked list is partitioned given the partition element
 	private static <T extends Comparable<T>> boolean verifyPartition(BNode<T> head, T partition) {
 		if(head == null)
 			return false;

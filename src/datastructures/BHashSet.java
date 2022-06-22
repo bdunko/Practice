@@ -62,6 +62,23 @@ public class BHashSet<T> {
 		size = 0;
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("HashSet - Size = ").append(size).append(" - [ ");
+		for(List<T> bucket : buckets) {
+			for(T elem : bucket) {
+				sb.append(elem.toString()).append(",");
+			}
+		}
+				
+		if(sb.charAt(sb.length()-1) == ',')
+			sb.deleteCharAt(sb.length()-1);
+		
+		sb.append(" ]");
+		return sb.toString();
+	}
+	
 	public static void main(String[] args) {
 		Test.header("BHashSet");
 		Test.header("create/size");

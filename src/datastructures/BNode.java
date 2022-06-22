@@ -4,6 +4,7 @@ import java.util.List;
 
 import testing.Test;
 
+//Simple node class used to build doubly-linked lists
 public class BNode<E> {
 	
 	public BNode<E> prev;
@@ -23,6 +24,15 @@ public class BNode<E> {
 	@Override
 	public String toString() {
 		return new StringBuilder().append("(").append(elem.toString()).append(")").toString();
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(!(o instanceof BNode<?>))
+			return false;
+		BNode<?> other = (BNode<?>)o;
+		
+		return other.elem.equals(elem);
 	}
 	
 	public static <T> String listToString(BNode<T> head) {

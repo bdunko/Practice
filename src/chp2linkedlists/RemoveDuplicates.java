@@ -7,8 +7,12 @@ import java.util.Set;
 import datastructures.BNode;
 import testing.Test;
 
+//Remove all duplicate elemnts from an unsorted linked list.
 public class RemoveDuplicates {
 	
+	//Adds all elements to a hashset as we iterate over list
+	//If element is already in hashset, delete this node.
+	//Time: O(N)	Space: O(N)		Where N is length of list
 	public static <T> BNode<T> removeDups(BNode<T> head) {
 		Set<T> uniques = new HashSet<T>();
 		
@@ -26,6 +30,10 @@ public class RemoveDuplicates {
 		return head;
 	}
 	
+	//Removes duplicates without using space for storage.
+	//Iterate over elements in list; for each, walk the rest of the list and 
+	//delete all nodes that duplicate that element.
+	//Time: O(N^2) 	Space: O(1)		Where N is length of linked list
 	public static <T> BNode<T> removeDupsNoStorage(BNode <T> head) {
 		BNode<T> current = head;
 		

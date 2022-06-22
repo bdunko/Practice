@@ -4,9 +4,13 @@ import java.util.HashMap;
 
 import testing.Test;
 
-public class Permutation {
+//Determines whether a string is a permutation of another string
+public class StringPermutation {
 	
-	//O(N + N + S), but S <= N so O(N)
+	//Adds all characters in string A to a hashmap, and string B to a different hashmap.
+	//Then ensures that the hashmaps are the same size, and that each character shows up the
+	//same number of times in each hashmap.
+	//Time: O(N)	Space: O(N)		Where N is the length of the strings
 	public static boolean isPermutation(String a, String b) {
 		if(a == null || b == null || a.length() != b.length())
 			return false;
@@ -36,12 +40,12 @@ public class Permutation {
 	}
 
 	public static void main(String[] args) {
+		Test.header("Permutation");
 		Test.assertion(isPermutation("ABCDE", "BCDAE"));
 		Test.assertion(!isPermutation("ABCDE", "BCDAEZ"));
 		Test.assertion(!isPermutation("ABCDE", "BCDAA"));
 		Test.assertion(!isPermutation("ABCDE", "QERTY"));
 		Test.assertion(isPermutation("AAABEBCDE", "BABAAEECD"));
-		
 		Test.results();
 	}
 }

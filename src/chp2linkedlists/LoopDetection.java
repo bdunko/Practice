@@ -6,8 +6,13 @@ import java.util.Set;
 import datastructures.BNode;
 import testing.Test;
 
+//Determine whether a linked list is circular (infinite/corrupted)
 public class LoopDetection {
 
+	//Add each node to a set until a node is repeated.
+	//The repeated node is the start of the loop.
+	//If we reach end of list, then list is not corrupted.
+	//Time: O(N)	Space: O(N)		Where N is length of list before loop.
 	public static <T> BNode<T> detectCircular(BNode<T> head) {
 		Set<BNode<T>> seen = new HashSet<BNode<T>>();
 		

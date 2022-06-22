@@ -5,8 +5,15 @@ import java.util.List;
 import datastructures.BNode;
 import testing.Test;
 
+//Return the kth to last element of singly linked list
 public class KthToLast {
 
+	//Returns kth to last element by using two pointers
+	//First, move the front pointer up k spaces (if this reaches end of list, return null)
+	//Back pointer starts at head of list.
+	//Move both pointers together until front reaches the tail
+	//Then return element at back, which is k behind front.
+	//Time: O(N)	Space: O(1)		Where N is length of list
 	public static <T> T kthToLast(BNode<T> head, int k) {
 		BNode<T> front = head;
 		for(int i = 0; i < k; i++) {

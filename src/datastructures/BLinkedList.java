@@ -2,6 +2,7 @@ package datastructures;
 
 import testing.Test;
 
+//Generic linkedlist implementation using sentinel nodes, with iterator
 public class BLinkedList<E> {
 
 	private class Node {
@@ -316,7 +317,6 @@ public class BLinkedList<E> {
 		Test.results();
 		
 		Test.header("Iterator testing");
-		Test.reset();
 		list.clear();
 		Test.assertion(list.isEmpty());
 		for(int i = 0; i < 10; i++) {

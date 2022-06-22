@@ -5,6 +5,7 @@ import java.util.List;
 import datastructures.BNode;
 import testing.Test;
 
+//Sums two lists where each list represents digits of a number
 public class SumLists {
 
 	//sums list where each list contains the digit in reverse order, returns answer is reverse order
@@ -50,6 +51,9 @@ public class SumLists {
 		return answerHead;
 	}
 	
+	//sums list where each list contains the digit in order, returns answer in order
+	//ex: input: (6, 1, 7) (2, 9, 5)  output: (9, 1, 2)
+	//617 + 295 = 912
 	public static BNode<Integer> sumLists(BNode<Integer> list1, BNode<Integer> list2) {
 		BNode<Integer> answerHead = null;
 		BNode<Integer> answerTail = null;
@@ -108,14 +112,16 @@ public class SumLists {
 		return answerHead;
 	}
 	
-	public static void testCase(List<Integer> list1, List<Integer> list2, List<Integer> answer) {
+	//Helper method for a normal test case
+	private static void testCase(List<Integer> list1, List<Integer> list2, List<Integer> answer) {
 		BNode<Integer> l1 = BNode.createList(list1);
 		BNode<Integer> l2 = BNode.createList(list2);
 		BNode<Integer> ans = BNode.createList(answer);
 		Test.assertion(BNode.listEquals(sumLists(l1, l2), ans));
 	}
 	
-	public static void testCaseReversed(List<Integer> list1, List<Integer> list2, List<Integer> answer) {
+	//Helper method for a reversed test case
+	private static void testCaseReversed(List<Integer> list1, List<Integer> list2, List<Integer> answer) {
 		BNode<Integer> l1 = BNode.createList(list1);
 		BNode<Integer> l2 = BNode.createList(list2);
 		BNode<Integer> ans = BNode.createList(answer);

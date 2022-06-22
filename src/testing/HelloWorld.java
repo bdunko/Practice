@@ -1,4 +1,4 @@
-package chp1arraysstrings;
+package testing;
 
 public class HelloWorld {
 

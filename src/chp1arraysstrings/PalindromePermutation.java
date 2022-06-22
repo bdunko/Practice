@@ -5,8 +5,14 @@ import java.util.Map;
 
 import testing.Test;
 
+//Determine whether a string is a permutation of a palindrome
 public class PalindromePermutation {
 	
+	//Determines if a string is a permutation of a palindrome by storing the frequency
+	//of each character in a hashmap.
+	//If all but one characters in the hashmap show up an even number of times,
+	//then the string is a permutation of a palindrome.
+	//Time: O(N)	Space: O(N)		Where N is the length of the string
 	public static boolean palindromePermutation(String s) {
 		Map<Character, Integer> frequencyMap = new HashMap<Character, Integer>();
 		s = s.replace(" ", "").toLowerCase(); //remove spaces and captalization
@@ -31,6 +37,7 @@ public class PalindromePermutation {
 	}
 	
 	public static void main(String[] args) {
+		Test.header("palindromePermutation");
 		Test.assertion(palindromePermutation("Tact Coa"));
 		Test.assertion(palindromePermutation("AAAABDDDd CDCDAAbe"));
 		Test.assertion(!palindromePermutation("ABCDEF"));

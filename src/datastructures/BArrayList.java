@@ -2,6 +2,7 @@ package datastructures;
 
 import testing.Test;
 
+//Generic arraylist implementation
 public class BArrayList<E> {
 
 	private static int RC_ERROR = -1;
@@ -144,11 +145,10 @@ public class BArrayList<E> {
 	
 	@Override
 	public boolean equals(Object o) {
-		if(!(o instanceof BArrayList)) 
+		if(!(o instanceof BArrayList<?>)) 
 			return false;
 		
-		@SuppressWarnings("unchecked")
-		BArrayList<E> other = (BArrayList<E>) o;
+		BArrayList<?> other = (BArrayList<?>) o;
 		
 		if(this.size != other.size)
 			return false;
@@ -242,6 +242,25 @@ public class BArrayList<E> {
 		Test.header("clear");
 		bar.clear();
 		Test.assertion(bar.isEmpty());
+		
+		//Test equals
+		Test.header("equals");
+		
+		BArrayList<String> barRight = new BArrayList<String>();
+		Test.assertion(bar.equals(barRight));
+		BArrayList<Integer> barWrong = new BArrayList<Integer>();
+		barWrong.add(1);
+		Test.assertion(!bar.equals(barWrong));
+		barRight.add("hi");
+		barRight.add("world");
+		barRight.add("three");
+		Test.assertion(!bar.equals(barRight));
+		bar.add("hi");
+		Test.assertion(!bar.equals(barRight));
+		bar.add("world");
+		Test.assertion(!bar.equals(barRight));
+		bar.add("three");
+		Test.assertion(bar.equals(barRight));
 		
 		Test.results();
 	}
