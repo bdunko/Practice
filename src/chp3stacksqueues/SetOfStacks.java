@@ -36,6 +36,8 @@ public class SetOfStacks<T> {
 		this.currentStackIndex = -1;
 	}
 	
+	//Adds an element on top of the global stack.
+	//O(1)
 	public void push(T elem) {
 		if(currentStackIndex == -1 || stacks.get(currentStackIndex).size == capacity) {
 			stacks.add(new StackNode(elem, null, 1));
@@ -47,6 +49,8 @@ public class SetOfStacks<T> {
 		}
 	}
 	
+	//Removes the top element of the global stack
+	//O(1)
 	public T pop() {
 		if(currentStackIndex == -1)
 			return null;
@@ -70,6 +74,10 @@ public class SetOfStacks<T> {
 		return popped.elem;
 	}
 	
+	//Pops an element of an internal stack.
+	//It is possible to pop all elements off of an internal stack, which will leave an empty stack.
+	//Empty stacks at the front of the global stack are removed automatically when calls to pop or popAt are made.
+	//O(1)
 	public T popAt(int stack) {
 		if(stack > currentStackIndex)
 			return null;

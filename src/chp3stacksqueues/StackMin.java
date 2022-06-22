@@ -2,12 +2,14 @@ package chp3stacksqueues;
 
 import testing.Test;
 
+//Implement a stack that, in addition to pop/push functionality, implements a min method which returns the
+//smallest element of the stack. All three functions should be O(1).
 public class StackMin<T extends Comparable<T>> {
 	
 	private class StackNode {
 		public T elem;
 		public StackNode next;
-		public T min;
+		public T min; //track the minimum of this node and all nodes below this node in the stack
 		
 		public StackNode(T elem, StackNode next, T min) {
 			this.elem = elem;
@@ -22,14 +24,19 @@ public class StackMin<T extends Comparable<T>> {
 		head = null;
 	}
 	
+	//Adds an element onto the stack
+	//O(1)
 	public void push(T elem) {
 		if(head == null) {
 			head = new StackNode(elem, null, elem);
 		} else {
+			//Pushes an element onto the stack, and tracks the minimum value of all elements below and including this element
 			head = new StackNode(elem, head, elem.compareTo(head.elem) < 0 ? elem : head.min);
 		}
 	}
 	
+	//Removes and returns the top element of the stack
+	//O(1)
 	public T pop() {
 		if(head == null)
 			return null;
@@ -40,6 +47,8 @@ public class StackMin<T extends Comparable<T>> {
 		return elem;
 	}
 	
+	//Returns (without removing) the top element of the stack
+	//O(1)
 	public T peek() {
 		if(head == null)
 			return null;
@@ -47,6 +56,8 @@ public class StackMin<T extends Comparable<T>> {
 		return head.elem;
 	}
 	
+	//Returns the smallest element in the stack
+	//O(1)
 	public T min() {
 		if(head == null)
 			return null;
