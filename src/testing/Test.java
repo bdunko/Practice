@@ -2,30 +2,41 @@ package testing;
 
 import java.util.Formatter;
 
-import chp1arraysstrings.IsUnique;
-import chp1arraysstrings.MatrixRotation;
-import chp1arraysstrings.MatrixZero;
-import chp1arraysstrings.OneAway;
-import chp1arraysstrings.PalindromePermutation;
-import chp1arraysstrings.StringCompression;
-import chp1arraysstrings.StringPermutation;
-import chp1arraysstrings.StringRotation;
-import chp1arraysstrings.URLify;
-import chp2linkedlists.DeleteMiddle;
-import chp2linkedlists.KthToLast;
-import chp2linkedlists.ListIntersection;
-import chp2linkedlists.ListPalindrome;
-import chp2linkedlists.ListPartition;
-import chp2linkedlists.LoopDetection;
-import chp2linkedlists.RemoveDuplicates;
-import chp2linkedlists.SumLists;
+import arraysstrings.BinarySearch;
+import arraysstrings.IsUnique;
+import arraysstrings.MatrixRotation;
+import arraysstrings.MatrixZero;
+import arraysstrings.OneAway;
+import arraysstrings.PalindromePermutation;
+import arraysstrings.StringCompression;
+import arraysstrings.StringPermutation;
+import arraysstrings.StringRotation;
+import arraysstrings.URLify;
 import datastructures.BArrayList;
 import datastructures.BDeque;
 import datastructures.BHashMap;
 import datastructures.BHashSet;
 import datastructures.BLinkedList;
-import datastructures.BNode;
+import datastructures.BLinkedNode;
+import datastructures.BMaxHeap;
+import datastructures.BMinHeap;
 import datastructures.BStringBuilder;
+import linkedlists.DeleteMiddle;
+import linkedlists.KthToLast;
+import linkedlists.ListIntersection;
+import linkedlists.ListPalindrome;
+import linkedlists.ListPartition;
+import linkedlists.LoopDetection;
+import linkedlists.RemoveDuplicates;
+import linkedlists.SumLists;
+import stacksqueues.AnimalShelter;
+import stacksqueues.QueueViaStacks;
+import stacksqueues.SetOfStacks;
+import stacksqueues.SortStack;
+import stacksqueues.StackMin;
+import stacksqueues.ThreeInOne;
+import treesgraphs.BinaryTraversals;
+import treesgraphs.GraphTraversals;
 
 //Simple testing framework
 public class Test {
@@ -35,13 +46,13 @@ public class Test {
 	//Tests if given object is null.
 	public static void isNull(Object a) {
 		boolean success = a == null;
-		System.out.printf("Test %4d: %s - Object was %s.\n", counter, success ? "SUCCESS" : "FAILURE", success ? "null" : "not null");
+		System.out.printf("Test %6d: %s - Object was %s.\n", counter, success ? "SUCCESS" : "FAILURE", success ? "null" : "not null");
 		increment(success);
 	}
 	
 	//Tests if given statement is true.
 	public static void assertion(boolean b) {
-		System.out.printf("Test %4d: %s - Assertion was %b.\n", counter, b ? "SUCCESS" : "FAILURE", b);
+		System.out.printf("Test %6d: %s - Assertion was %b.\n", counter, b ? "SUCCESS" : "FAILURE", b);
 		increment(b);
 	}
 	
@@ -54,7 +65,7 @@ public class Test {
 		else 
 			success = a.equals(b);
 		
-		System.out.printf("Test %4d: %s - %s %s %s\n", counter, success ? "SUCCESS" : "FAILURE", (a == null ? "(NULL)" : a.toString()), success ? "=" : "!=", (b == null ? "(NULL)" : b.toString()));
+		System.out.printf("Test %6d: %s - %s %s %s\n", counter, success ? "SUCCESS" : "FAILURE", (a == null ? "(NULL)" : a.toString()), success ? "=" : "!=", (b == null ? "(NULL)" : b.toString()));
 		increment(success);
 	}
 	
@@ -74,7 +85,7 @@ public class Test {
 			}
 		}
 		
-		System.out.printf("Test %4d: %s - matrix1 %s matrix2\n", counter, success ? "SUCCESS" : "FAILURE", success ? "=" : "!=");
+		System.out.printf("Test %06d: %s - matrix1 %s matrix2\n", counter, success ? "SUCCESS" : "FAILURE", success ? "=" : "!=");
 		increment(success);
 	}
 	
@@ -142,13 +153,18 @@ public class Test {
 	@SuppressWarnings("rawtypes")
 	private final static Class[] classes = {
 			IsUnique.class, MatrixRotation.class, MatrixZero.class, OneAway.class, PalindromePermutation.class,
-			StringPermutation.class, StringCompression.class, StringRotation.class, URLify.class,
+			StringPermutation.class, StringCompression.class, StringRotation.class, URLify.class, BinarySearch.class,
 			
 			DeleteMiddle.class, KthToLast.class, ListIntersection.class, LoopDetection.class, ListPalindrome.class,
 			LoopDetection.class, ListPartition.class, RemoveDuplicates.class, SumLists.class,
 			
-			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BNode.class, 
-			BStringBuilder.class, BDeque.class
+			SetOfStacks.class, SortStack.class, StackMin.class, ThreeInOne.class, QueueViaStacks.class, 
+			AnimalShelter.class,
+			
+			BinaryTraversals.class, GraphTraversals.class,
+			
+			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
+			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class
 			};
 	
 	//Runs all tests

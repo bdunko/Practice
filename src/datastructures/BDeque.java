@@ -5,8 +5,8 @@ import testing.Test;
 //Generic deque (stack + queue) class, implemented internally as a linked list
 public class BDeque<T> {
 	
-	private BNode<T> head;
-	private BNode<T> tail;
+	private BLinkedNode<T> head;
+	private BLinkedNode<T> tail;
 	private int size;
 	
 	public BDeque() {
@@ -28,10 +28,10 @@ public class BDeque<T> {
 	
 	public void pushFront(T elem) {
 		if(size == 0) {
-			head = new BNode<T>(elem);
+			head = new BLinkedNode<T>(elem);
 			tail = head;
 		} else {
-			head.prev = new BNode<T>(elem);
+			head.prev = new BLinkedNode<T>(elem);
 			head.prev.next = head;
 			head = head.prev;
 		}
@@ -53,10 +53,10 @@ public class BDeque<T> {
 	
 	public void pushBack(T elem) {
 		if(size == 0) {
-			tail = new BNode<T>(elem);
+			tail = new BLinkedNode<T>(elem);
 			head = tail;
 		} else {
-			tail.next = new BNode<T>(elem);
+			tail.next = new BLinkedNode<T>(elem);
 			tail.next.prev = tail;
 			tail = tail.next;
 		}
@@ -94,8 +94,8 @@ public class BDeque<T> {
 		if(other.size() != size())
 			return false;
 		
-		BNode<T> myCurrent = head;
-		BNode<?> otherCurrent = other.head;
+		BLinkedNode<T> myCurrent = head;
+		BLinkedNode<?> otherCurrent = other.head;
 		while(myCurrent != null) {
 			if(!myCurrent.elem.equals(otherCurrent.elem))
 				return false;
