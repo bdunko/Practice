@@ -36,7 +36,13 @@ import stacksqueues.SortStack;
 import stacksqueues.StackMin;
 import stacksqueues.ThreeInOne;
 import treesgraphs.BinaryTraversals;
+import treesgraphs.BinaryTreeHeight;
+import treesgraphs.DepthLists;
 import treesgraphs.GraphTraversals;
+import treesgraphs.MinimalTree;
+import treesgraphs.PathBetweenNodes;
+import treesgraphs.TreeBalanced;
+import treesgraphs.VerifyBST;
 
 //Simple testing framework
 public class Test {
@@ -161,7 +167,8 @@ public class Test {
 			SetOfStacks.class, SortStack.class, StackMin.class, ThreeInOne.class, QueueViaStacks.class, 
 			AnimalShelter.class,
 			
-			BinaryTraversals.class, GraphTraversals.class,
+			BinaryTraversals.class, GraphTraversals.class, PathBetweenNodes.class, VerifyBST.class, BinaryTreeHeight.class,
+			MinimalTree.class, DepthLists.class, TreeBalanced.class,
 			
 			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
 			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class

@@ -38,9 +38,6 @@ public class VerifyBST {
 		if(tree == null)
 			return true;
 		
-		//does left subtree contain a value larger than current?
-		
-		
 		//if left node exists, verify that all elements in left subtree are less than current
 		if(tree.left != null && !subtreeLessThan(tree.left, tree.data))
 			return false;
