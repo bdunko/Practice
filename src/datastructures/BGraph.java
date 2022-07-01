@@ -20,6 +20,22 @@ public class BGraph<T> {
 			node.marked = false;
 	}
 	
+	public boolean contains(T elem) {
+		for(BGraphNode<T> node : nodes) {
+			if(node.data.equals(elem))
+				return true;
+		}
+		return false;
+	}
+	
+	public BGraphNode<T> getVertex(T elem) {
+		for(BGraphNode<T> node : nodes) {
+			if(node.data.equals(elem))
+				return node;
+		}
+		return null;
+	}
+	
 	
 	//Creates the sample graph depicted in samplegraph.png
 	//Notably, node neighbors are ordered in ascending order for consistent DFS/BFS testing

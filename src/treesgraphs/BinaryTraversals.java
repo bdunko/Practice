@@ -40,6 +40,7 @@ public class BinaryTraversals {
 	
 	public static void main(String[] args) {
 		BBinaryNode<Integer> tree = BBinaryNode.buildSampleTree();
+		BBinaryNode<Integer> tree2 = BBinaryNode.buildSampleTree2();
 		
 		Test.header("BinaryTraversals");
 		Test.header("inorder");
@@ -48,6 +49,11 @@ public class BinaryTraversals {
 		inorder(tree);
 		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
 		Test.equals(out.toString(), "8 4 2 9 5 10 1 11 6 3 7 12 ");
+		out = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(out));
+		inorder(tree2);
+		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
+		Test.equals(out.toString(), "7 8 5 3 9 6 11 10 12 2 4 13 15 14 17 18 16 1 ");
 		
 		
 		Test.header("preorder");

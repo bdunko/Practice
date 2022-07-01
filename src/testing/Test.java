@@ -39,6 +39,7 @@ import treesgraphs.BinaryTraversals;
 import treesgraphs.BinaryTreeHeight;
 import treesgraphs.DepthLists;
 import treesgraphs.GraphTraversals;
+import treesgraphs.InorderSuccessor;
 import treesgraphs.MinimalTree;
 import treesgraphs.PathBetweenNodes;
 import treesgraphs.TreeBalanced;
@@ -46,19 +47,19 @@ import treesgraphs.VerifyBST;
 
 //Simple testing framework
 public class Test {
-	private static int counter = 1;
-	private static int successes = 0;
+	private static int testCounter = 1;
+	private static int successCounter = 0;
 	
 	//Tests if given object is null.
 	public static void isNull(Object a) {
 		boolean success = a == null;
-		System.out.printf("Test %6d: %s - Object was %s.\n", counter, success ? "SUCCESS" : "FAILURE", success ? "null" : "not null");
+		System.out.printf("Test %6d: %s - Object was %s.\n", testCounter, success ? "SUCCESS" : "FAILURE", success ? "null" : "not null");
 		increment(success);
 	}
 	
 	//Tests if given statement is true.
 	public static void assertion(boolean b) {
-		System.out.printf("Test %6d: %s - Assertion was %b.\n", counter, b ? "SUCCESS" : "FAILURE", b);
+		System.out.printf("Test %6d: %s - Assertion was %b.\n", testCounter, b ? "SUCCESS" : "FAILURE", b);
 		increment(b);
 	}
 	
@@ -71,7 +72,7 @@ public class Test {
 		else 
 			success = a.equals(b);
 		
-		System.out.printf("Test %6d: %s - %s %s %s\n", counter, success ? "SUCCESS" : "FAILURE", (a == null ? "(NULL)" : a.toString()), success ? "=" : "!=", (b == null ? "(NULL)" : b.toString()));
+		System.out.printf("Test %6d: %s - %s %s %s\n", testCounter, success ? "SUCCESS" : "FAILURE", (a == null ? "(NULL)" : a.toString()), success ? "=" : "!=", (b == null ? "(NULL)" : b.toString()));
 		increment(success);
 	}
 	
@@ -91,35 +92,30 @@ public class Test {
 			}
 		}
 		
-		System.out.printf("Test %06d: %s - matrix1 %s matrix2\n", counter, success ? "SUCCESS" : "FAILURE", success ? "=" : "!=");
+		System.out.printf("Test %06d: %s - matrix1 %s matrix2\n", testCounter, success ? "SUCCESS" : "FAILURE", success ? "=" : "!=");
 		increment(success);
 	}
 	
 	//Internal helper method which increments test number and success number
 	private static void increment(boolean success) {
-		Test.counter++;
+		Test.testCounter++;
 		if(success)
-			successes++;
+			successCounter++;
 	}
 	
 	//Prints a nice header
-	public static void header() {
-		System.out.printf("-----Tests so far: %d/%d----\n", successes, counter-1);
-	}
-	
-	//Prints a nice header given a test name
 	public static void header(String header) {
-		System.out.printf("-----%s : Tests so far: %d/%d----\n", header, successes, counter-1);
+		System.out.printf("-----%s : Tests so far: %d/%d----\n", header, successCounter, testCounter-1);
 	}
 	
 	//Prints the results of all tests to this point
 	public static void results() {
-		int nTests = counter - 1;
-		System.out.printf("----------\n%d/%d tests succeeded.\n", successes, nTests);
-		if(successes == nTests)
+		int nTests = testCounter - 1;
+		System.out.printf("----------\n%d/%d tests succeeded.\n", successCounter, nTests);
+		if(successCounter == nTests)
 			System.out.printf("All tests pass!\n");
 		else
-			System.out.printf("%d tests failed...\n", nTests - successes);
+			System.out.printf("%d tests failed...\n", nTests - successCounter);
 	}
 	
 	//Outputs a matrix to stdout
@@ -148,12 +144,6 @@ public class Test {
 		log(o.toString());
 	}
 	
-	//Resets the test counters
-	public static void reset() {
-		counter = 1;
-		successes = 0;
-	}
-	
 	//List of all classes to be tested
 	//Each class must have a main method which contains its tests
 	@SuppressWarnings("rawtypes")
@@ -168,7 +158,7 @@ public class Test {
 			AnimalShelter.class,
 			
 			BinaryTraversals.class, GraphTraversals.class, PathBetweenNodes.class, VerifyBST.class, BinaryTreeHeight.class,
-			MinimalTree.class, DepthLists.class, TreeBalanced.class,
+			MinimalTree.class, DepthLists.class, TreeBalanced.class, InorderSuccessor.class,
 			
 			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
 			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class
@@ -187,7 +177,7 @@ public class Test {
 			}
 			
 		} catch (Exception e) {
-			log("Failed to run all tests... " + e.toString());
+			log("Failed to run tests... " + e.toString());
 		}
 		log("All done!");
 	}

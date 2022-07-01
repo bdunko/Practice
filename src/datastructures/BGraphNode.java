@@ -19,4 +19,17 @@ public class BGraphNode<T> {
 		this.neighbors = neighbors;
 		this.marked = false;
 	}
+	
+	public boolean hasNeighbor(T elem) {
+		for(BGraphNode<T> neighbor : neighbors) {
+			if(neighbor.data.equals(elem))
+				return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public String toString() {
+		return "(" + data.toString() + ")";
+	}
 }
