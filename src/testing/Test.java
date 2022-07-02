@@ -37,7 +37,9 @@ import stacksqueues.StackMin;
 import stacksqueues.ThreeInOne;
 import treesgraphs.BinaryTraversals;
 import treesgraphs.BinaryTreeHeight;
+import treesgraphs.BuildOrder;
 import treesgraphs.DepthLists;
+import treesgraphs.FirstCommonAncestor;
 import treesgraphs.GraphTraversals;
 import treesgraphs.InorderSuccessor;
 import treesgraphs.MinimalTree;
@@ -158,7 +160,7 @@ public class Test {
 			AnimalShelter.class,
 			
 			BinaryTraversals.class, GraphTraversals.class, PathBetweenNodes.class, VerifyBST.class, BinaryTreeHeight.class,
-			MinimalTree.class, DepthLists.class, TreeBalanced.class, InorderSuccessor.class,
+			MinimalTree.class, DepthLists.class, TreeBalanced.class, InorderSuccessor.class, BuildOrder.class, FirstCommonAncestor.class,
 			
 			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
 			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class

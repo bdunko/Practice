@@ -22,6 +22,23 @@ public class BBinaryNode<T> {
 		this.parent = parent;
 	}
 	
+	//Returns the node in this tree that contains the given element, or null if none do
+	public BBinaryNode<T> getNode(T elem) {
+		if(elem.equals(data))
+			return this;
+		
+		BBinaryNode<T> leftC = (left == null ? null : left.getNode(elem));
+		BBinaryNode<T> rightC = (right == null ? null : right.getNode(elem));
+		
+		if(leftC != null)
+			return leftC;
+		
+		if(rightC != null)
+			return rightC;
+		
+		return null;
+	}
+	
 	//determines and returns the height of the given tree
 	public static int treeHeight(BBinaryNode<Integer> root) {
 		if(root == null)
