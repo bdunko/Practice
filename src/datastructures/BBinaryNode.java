@@ -39,6 +39,18 @@ public class BBinaryNode<T> {
 		return null;
 	}
 	
+	public static <T> boolean treeEquals(BBinaryNode<T> tree1, BBinaryNode<T> tree2) {
+		if(tree1 == null && tree2 == null)
+			return true;
+		else if (tree1 == null || tree2 == null)
+			return false;
+		
+		if(tree1.data != tree2.data)
+			return false;
+		
+		return treeEquals(tree1.left, tree2.left) && treeEquals(tree1.right, tree2.right);
+	}
+	
 	//determines and returns the height of the given tree
 	public static int treeHeight(BBinaryNode<Integer> root) {
 		if(root == null)
