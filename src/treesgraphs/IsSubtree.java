@@ -3,8 +3,10 @@ package treesgraphs;
 import datastructures.BBinaryNode;
 import testing.Test;
 
+//Determine if one tree is a subtree of another
 public class IsSubtree {
 
+	//Determine if two trees are equal
 	private static <T> boolean treeEquals(BBinaryNode<T> tree1, BBinaryNode<T> tree2) {
 		if(tree1 == null && tree2 == null)
 			return true;
@@ -21,9 +23,11 @@ public class IsSubtree {
 		if(larger == null || smaller == null)
 			return false;
 		
+		//check if the two trees are identical
 		if(treeEquals(larger, smaller))
 			return true;
 		
+		//check if either the left or right child's subtree matches the target
 		return isSubtree(larger.left, smaller) || isSubtree(larger.right, smaller);
 	}
 	

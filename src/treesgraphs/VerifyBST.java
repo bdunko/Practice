@@ -53,6 +53,21 @@ public class VerifyBST {
 		return true;
 	}
 	
+	public static boolean verifyBST2Helper(BBinaryNode<Integer> current, int min, int max) {
+		if(current == null)
+			return true;
+		if(current.data < min)
+			return false;
+		if(current.data >= max)
+			return false;
+		
+		return verifyBST2Helper(current.left, min, current.data) && verifyBST2Helper(current.right, current.data, max);
+	}
+	
+	public static boolean verifyBST2(BBinaryNode<Integer> tree) {
+		return verifyBST2Helper(tree, Integer.MIN_VALUE, Integer.MAX_VALUE);
+	}
+	
 	
 	public static void main(String[] args) {
 		Test.header("VerifyBST");
@@ -117,6 +132,45 @@ public class VerifyBST {
 		Test.assertion(verifyBST(tree));
 		tree.right.right = new BBinaryNode<Integer>(19);
 		Test.assertion(verifyBST(tree));
+		
+		Test.header("V2");
+		tree = new BBinaryNode<Integer>(10);
+		Test.assertion(verifyBST2(tree));
+		
+		tree.left = new BBinaryNode<Integer>(11);
+		Test.assertion(!verifyBST2(tree));
+		tree.left = new BBinaryNode<Integer>(5);
+		Test.assertion(verifyBST2(tree));
+		tree.right = new BBinaryNode<Integer>(9);
+		Test.assertion(!verifyBST2(tree));
+		tree.right = new BBinaryNode<Integer>(10);
+		Test.assertion(verifyBST2(tree));
+		tree.right = new BBinaryNode<Integer>(15);
+		Test.assertion(verifyBST2(tree));
+		
+		tree.left.left = new BBinaryNode<Integer>(6);
+		Test.assertion(!verifyBST2(tree));
+		tree.left.left = new BBinaryNode<Integer>(3);
+		Test.assertion(verifyBST2(tree));
+		
+		tree.left.right = new BBinaryNode<Integer>(12);
+		Test.assertion(!verifyBST2(tree));
+		tree.left.right = new BBinaryNode<Integer>(1);
+		Test.assertion(!verifyBST2(tree));
+		tree.left.right = new BBinaryNode<Integer>(7);
+		Test.assertion(verifyBST2(tree));
+		
+		tree.right.left = new BBinaryNode<Integer>(16);
+		Test.assertion(!verifyBST2(tree));
+		tree.right.left = new BBinaryNode<Integer>(13);
+		Test.assertion(verifyBST2(tree));
+		
+		tree.right.right = new BBinaryNode<Integer>(13);
+		Test.assertion(!verifyBST2(tree));
+		tree.right.right = new BBinaryNode<Integer>(15);
+		Test.assertion(verifyBST2(tree));
+		tree.right.right = new BBinaryNode<Integer>(19);
+		Test.assertion(verifyBST2(tree));
 		
 		Test.results();
 	}

@@ -15,13 +15,7 @@ public class FirstCommonAncestor {
 		if(tree == node1)
 			return true;
 		
-		if(treeContains(tree.left, node1))
-			return true;
-		
-		if(treeContains(tree.right, node1))
-			return true;
-		
-		return false;
+		return treeContains(tree.left, node1) || treeContains(tree.right, node1);
 	}
 	
 	//Finds the first common ancestor of two binary tree nodes

@@ -11,6 +11,7 @@ import arraysstrings.PalindromePermutation;
 import arraysstrings.StringCompression;
 import arraysstrings.StringPermutation;
 import arraysstrings.StringRotation;
+import arraysstrings.SubarraySum;
 import arraysstrings.URLify;
 import datastructures.BArrayList;
 import datastructures.BDeque;
@@ -43,12 +44,15 @@ import treesgraphs.DepthLists;
 import treesgraphs.FirstCommonAncestor;
 import treesgraphs.GraphTraversals;
 import treesgraphs.InorderSuccessor;
+import treesgraphs.IsSubtree;
 import treesgraphs.MinimalTree;
 import treesgraphs.PathBetweenNodes;
+import treesgraphs.PathsWithSum;
+import treesgraphs.RandomBST;
 import treesgraphs.TreeBalanced;
 import treesgraphs.VerifyBST;
 
-//Simple testing framework
+//Simple unit testing framework
 public class Test {
 	private static int testCounter = 1;
 	private static int successCounter = 0;
@@ -153,6 +157,7 @@ public class Test {
 	private final static Class[] classes = {
 			IsUnique.class, MatrixRotation.class, MatrixZero.class, OneAway.class, PalindromePermutation.class,
 			StringPermutation.class, StringCompression.class, StringRotation.class, URLify.class, BinarySearch.class,
+			SubarraySum.class,
 			
 			DeleteMiddle.class, KthToLast.class, ListIntersection.class, LoopDetection.class, ListPalindrome.class,
 			LoopDetection.class, ListPartition.class, RemoveDuplicates.class, SumLists.class,
@@ -162,7 +167,7 @@ public class Test {
 			
 			BinaryTraversals.class, GraphTraversals.class, PathBetweenNodes.class, VerifyBST.class, BinaryTreeHeight.class,
 			MinimalTree.class, DepthLists.class, TreeBalanced.class, InorderSuccessor.class, BuildOrder.class, 
-			FirstCommonAncestor.class, BSTSequences.class,
+			FirstCommonAncestor.class, BSTSequences.class, IsSubtree.class, RandomBST.class, PathsWithSum.class,
 			
 			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
 			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class
