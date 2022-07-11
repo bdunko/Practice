@@ -13,6 +13,7 @@ import arraysstrings.StringPermutation;
 import arraysstrings.StringRotation;
 import arraysstrings.SubarraySum;
 import arraysstrings.URLify;
+import bitmanip.BitBasics;
 import datastructures.BArrayList;
 import datastructures.BDeque;
 import datastructures.BHashMap;
@@ -170,7 +171,9 @@ public class Test {
 			FirstCommonAncestor.class, BSTSequences.class, IsSubtree.class, RandomBST.class, PathsWithSum.class,
 			
 			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
-			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class
+			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class,
+			
+			BitBasics.class
 			};
 	
 	//Runs all tests
