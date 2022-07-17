@@ -2,6 +2,7 @@ package bitmanip;
 
 import testing.Test;
 
+//Given a number, return the next largest and next smallest number with the same number of 0s and 1s in its binary representation
 public class NextNumber {
 	
 	private static boolean get(int N, int index) {
@@ -47,6 +48,10 @@ public class NextNumber {
 		return new Pair(smallest, largest);
 	}
 	
+	//idea: find the rightmost 0 with a 1 to the right.
+	//Swap this 1 and 0. Now we have a larger number with same number of 1s and 0s.
+	//Now we want to make this number as small as possible with the remaining 1s to the right.
+	//Move each 1 as far right as possible (so if there were 3 1s to the right, the leftmost 3 digits would be 111)
 	private static int nextLargest(int num) {
 		int nextLargest = -1;
 		
@@ -68,8 +73,6 @@ public class NextNumber {
 		}
 		
 		if(rightmostZeroIndex != 32) {
-			//0101
-			
 			nextLargest = num;
 			//flip to 1
 			nextLargest |= (1 << rightmostZeroIndex);

@@ -4,6 +4,10 @@ import testing.Test;
 
 public class BitBasics {
 
+	//constants for a mask of alternating 1s and 0s
+	public static int EVEN_MASK = 0b10101010101010101010101010101010; //-1431655766
+	public static int ODD_MASK = 0b01010101010101010101010101010101; //1431655765
+	
 	public static String itob(int i) {
 		return Integer.toBinaryString(i);
 	}

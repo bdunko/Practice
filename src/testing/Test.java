@@ -13,7 +13,15 @@ import arraysstrings.StringPermutation;
 import arraysstrings.StringRotation;
 import arraysstrings.SubarraySum;
 import arraysstrings.URLify;
+import bitmanip.BinaryToString;
 import bitmanip.BitBasics;
+import bitmanip.Conversion;
+import bitmanip.DrawLine;
+import bitmanip.FlipBitToWin;
+import bitmanip.Insertion;
+import bitmanip.NextNumber;
+import bitmanip.PairwiseSwap;
+import bitmanip.PowersOfTwo;
 import datastructures.BArrayList;
 import datastructures.BDeque;
 import datastructures.BHashMap;
@@ -173,7 +181,8 @@ public class Test {
 			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
 			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class,
 			
-			BitBasics.class
+			BitBasics.class, BinaryToString.class, FlipBitToWin.class, Insertion.class, NextNumber.class,
+			Conversion.class, PairwiseSwap.class, PowersOfTwo.class, DrawLine.class
 			};
 	
 	//Runs all tests

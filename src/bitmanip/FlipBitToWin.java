@@ -2,6 +2,7 @@ package bitmanip;
 
 import testing.Test;
 
+//Given a number, if you flip one bit, what is the length of the longest sequence of 1s?
 public class FlipBitToWin {
 	
 	private static boolean get(int N, int index) {
