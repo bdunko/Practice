@@ -33,6 +33,41 @@ public class Insertion {
 		return N;
 	}
 	
+	public static int insertion2(int N, int M, int start, int end) {
+		//clear bits from start to end in N
+		
+		//3, 6
+		//goal: 
+		//10000111
+		//76543210
+		
+		//11111111 << 7 = 10000000
+		int mask = (~0) << (end+1); 
+		
+		//1 << 3 = 00001000 - 1 = 00000111
+		int startMask = (1 << start) - 1;
+		
+		//10000111
+		mask |= startMask;
+		
+		//zero out the bits in N
+		N &= mask;
+		
+		//zero out the other bits in M
+		M &= ~(mask);
+
+		//merge the two
+		N += M;
+		
+		//return the result
+		return N;
+	}
+	
+	private static void testCase(int N, int M, int start, int end, int expected) {
+		Test.equals(insertion(N, M, start, end), expected); 
+		Test.equals(insertion2(N, M, start, end), expected); 
+	}
+	
 	public static void main(String[] args) {
 		Test.header("Insertion");
 		
@@ -49,11 +84,12 @@ public class Insertion {
 		Test.equals(clear(0b111, 1), 0b101);
 		Test.equals(clear(0b111, 2), 0b011);
 		
-		Test.equals(insertion(0b11000000, 0b00011011, 1, 4), 0b11011010); 
-		Test.equals(insertion(0b00000000, 0b11111111, 0, 7), 0b11111111); 
-		Test.equals(insertion(0b11001100, 0b10101010, 3, 6), 0b10101100); 
-		Test.equals(insertion(0b0000, 0b1000, 3, 3), 0b1000); 
-		Test.equals(insertion(0b11000000, 0b00011011, 0, 0), 0b11000001); 
+		
+		testCase(0b11000000, 0b00011011, 1, 4, 0b11011010);
+		testCase(0b00000000, 0b11111111, 0, 7, 0b11111111);
+		testCase(0b11001100, 0b10101010, 3, 6, 0b10101100);
+		testCase(0b0000, 0b1000, 3, 3, 0b1000);
+		testCase(0b11000000, 0b00011011, 0, 0, 0b11000001);
 		
 		Test.results();
 	}

@@ -60,6 +60,7 @@ import treesgraphs.PathsWithSum;
 import treesgraphs.RandomBST;
 import treesgraphs.TreeBalanced;
 import treesgraphs.VerifyBST;
+import uncategorized.IsPrime;
 
 //Simple unit testing framework
 public class Test {
@@ -182,7 +183,9 @@ public class Test {
 			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class,
 			
 			BitBasics.class, BinaryToString.class, FlipBitToWin.class, Insertion.class, NextNumber.class,
-			Conversion.class, PairwiseSwap.class, PowersOfTwo.class, DrawLine.class
+			Conversion.class, PairwiseSwap.class, PowersOfTwo.class, DrawLine.class,
+			
+			IsPrime.class
 			};
 	
 	//Runs all tests
