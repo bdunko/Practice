@@ -67,10 +67,45 @@ public class Test {
 	private static int testCounter = 1;
 	private static int successCounter = 0;
 	
+	private static class Timer {
+		private static long startTime;
+		private boolean started;
+		
+		private Timer() {
+			startTime = 0;
+			started = false;
+		}
+		
+		public void start() {
+			startTime = System.nanoTime();
+			started = true;
+		}
+		
+		public void reportAndReset() {
+			if(!started) {
+				System.out.println("Timer never started!");
+			} else 
+			{
+				long time = System.nanoTime() - startTime;
+				System.out.printf("Timer ran for: %d ms\n", time/1000000L);
+				startTime = 0;
+			}
+		}
+	}
+	
+	private static Timer TIMER = new Test.Timer();
+	
 	//Tests if given object is null.
 	public static void isNull(Object a) {
 		boolean success = a == null;
 		System.out.printf("Test %6d: %s - Object was %s.\n", testCounter, success ? "SUCCESS" : "FAILURE", success ? "null" : "not null");
+		increment(success);
+	}
+	
+	//Tests if given object is not null.
+	public static void notNull(Object a) {
+		boolean success = a != null;
+		System.out.printf("Test %6d: %s - Object was %s.\n", testCounter, success ? "SUCCESS" : "FAILURE", success ? "not null" : "null");
 		increment(success);
 	}
 	
@@ -159,6 +194,14 @@ public class Test {
 	//Outputs an object to stdout
 	public static void log(Object o) {
 		log(o.toString());
+	}
+	
+	public static void timerStart() {
+		TIMER.start();
+	}
+	
+	public static void timerReportAndReset() {
+		TIMER.reportAndReset();
 	}
 	
 	//List of all classes to be tested
