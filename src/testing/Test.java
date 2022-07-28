@@ -115,6 +115,11 @@ public class Test {
 		increment(b);
 	}
 	
+	public static void fail(String msg) {
+		System.out.printf("Test %6d: %s - FAILURE - %s.\n", testCounter, msg);
+		increment(false);
+	}
+	
 	//Tests equality between two objects.
 	//Also tests equality between primitives thanks to autoboxing
 	public static void equals(Object a, Object b) {
