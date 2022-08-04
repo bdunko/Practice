@@ -57,6 +57,7 @@ public class BinaryToString {
 		Test.equals(binaryToString(9.75), "1001.11");
 		Test.equals(binaryToString(0.828125), "0.110101");
 		Test.equals(binaryToString(1.0/3), "ERROR");
+		Test.equals(binaryToString(0.1), "ERROR");
 		
 		Test.results();
 	}

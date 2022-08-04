@@ -1,5 +1,6 @@
 package testing;
 
+import java.util.Arrays;
 import java.util.Formatter;
 
 import arraysstrings.BinarySearch;
@@ -39,6 +40,21 @@ import linkedlists.ListPartition;
 import linkedlists.LoopDetection;
 import linkedlists.RemoveDuplicates;
 import linkedlists.SumLists;
+import recursiondynamic.BooleanEvaluation;
+import recursiondynamic.Coins;
+import recursiondynamic.Fibonacci;
+import recursiondynamic.MagicIndex;
+import recursiondynamic.NQueens;
+import recursiondynamic.PaintFill;
+import recursiondynamic.Parens;
+import recursiondynamic.Pathfinding;
+import recursiondynamic.Permutations;
+import recursiondynamic.PowerSet;
+import recursiondynamic.RecursiveMultiply;
+import recursiondynamic.RobotInAGrid;
+import recursiondynamic.StackOfBoxes;
+import recursiondynamic.TowersOfHanoi;
+import recursiondynamic.TripleStep;
 import stacksqueues.AnimalShelter;
 import stacksqueues.QueueViaStacks;
 import stacksqueues.SetOfStacks;
@@ -116,8 +132,13 @@ public class Test {
 	}
 	
 	public static void fail(String msg) {
-		System.out.printf("Test %6d: %s - FAILURE - %s.\n", testCounter, msg);
+		System.out.printf("Test %6d: FAILURE - %s\n", testCounter, msg);
 		increment(false);
+	}
+	
+	public static void success(String msg) {
+		System.out.printf("Test %6d: SUCCESS - %s\n", testCounter, msg);
+		increment(true);
 	}
 	
 	//Tests equality between two objects.
@@ -201,6 +222,22 @@ public class Test {
 		log(o.toString());
 	}
 	
+	public static void log(int[] array) {
+		log(Arrays.toString(array));
+	}
+	
+	public static <T> void log(T[] array) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("[");
+		for(int i = 0; i < array.length; i++) {
+			sb.append(array[i].toString()).append(",");
+		}
+		if(sb.charAt(sb.length()-1) == ',')
+			sb.deleteCharAt(sb.length()-1);
+		sb.append("]");
+		System.out.println(sb.toString());
+	}
+	
 	public static void timerStart() {
 		TIMER.start();
 	}
@@ -213,26 +250,38 @@ public class Test {
 	//Each class must have a main method which contains its tests
 	@SuppressWarnings("rawtypes")
 	private final static Class[] classes = {
+			//strings/arrays
 			IsUnique.class, MatrixRotation.class, MatrixZero.class, OneAway.class, PalindromePermutation.class,
 			StringPermutation.class, StringCompression.class, StringRotation.class, URLify.class, BinarySearch.class,
 			SubarraySum.class,
 			
+			//linked lists
 			DeleteMiddle.class, KthToLast.class, ListIntersection.class, LoopDetection.class, ListPalindrome.class,
 			LoopDetection.class, ListPartition.class, RemoveDuplicates.class, SumLists.class,
 			
+			//stacks and queues
 			SetOfStacks.class, SortStack.class, StackMin.class, ThreeInOne.class, QueueViaStacks.class, 
 			AnimalShelter.class,
 			
+			//graphs and trees
 			BinaryTraversals.class, GraphTraversals.class, PathBetweenNodes.class, VerifyBST.class, BinaryTreeHeight.class,
 			MinimalTree.class, DepthLists.class, TreeBalanced.class, InorderSuccessor.class, BuildOrder.class, 
 			FirstCommonAncestor.class, BSTSequences.class, IsSubtree.class, RandomBST.class, PathsWithSum.class,
 			
-			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
-			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class,
-			
+			//bit manipulation
 			BitBasics.class, BinaryToString.class, FlipBitToWin.class, Insertion.class, NextNumber.class,
 			Conversion.class, PairwiseSwap.class, PowersOfTwo.class, DrawLine.class,
 			
+			//recursion and dynamic programming
+			BooleanEvaluation.class, Coins.class, Fibonacci.class, MagicIndex.class, NQueens.class,
+			PaintFill.class, Parens.class, Pathfinding.class, Permutations.class, PowerSet.class,
+			RecursiveMultiply.class, RobotInAGrid.class, StackOfBoxes.class, TowersOfHanoi.class, TripleStep.class,
+			
+			//data structures
+			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
+			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class,
+			
+			//uncategorized
 			IsPrime.class
 			};
 	
