@@ -1,5 +1,8 @@
 package testing;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Formatter;
 
@@ -24,6 +27,7 @@ import bitmanip.NextNumber;
 import bitmanip.PairwiseSwap;
 import bitmanip.PowersOfTwo;
 import datastructures.BArrayList;
+import datastructures.BBitArray;
 import datastructures.BDeque;
 import datastructures.BHashMap;
 import datastructures.BHashSet;
@@ -52,9 +56,11 @@ import recursiondynamic.Permutations;
 import recursiondynamic.PowerSet;
 import recursiondynamic.RecursiveMultiply;
 import recursiondynamic.RobotInAGrid;
+import recursiondynamic.SplitNumber;
 import recursiondynamic.StackOfBoxes;
 import recursiondynamic.TowersOfHanoi;
 import recursiondynamic.TripleStep;
+import sortsearch.Sorts;
 import stacksqueues.AnimalShelter;
 import stacksqueues.QueueViaStacks;
 import stacksqueues.SetOfStacks;
@@ -80,9 +86,6 @@ import uncategorized.IsPrime;
 
 //Simple unit testing framework
 public class Test {
-	private static int testCounter = 1;
-	private static int successCounter = 0;
-	
 	private static class Timer {
 		private static long startTime;
 		private boolean started;
@@ -99,46 +102,50 @@ public class Test {
 		
 		public void reportAndReset() {
 			if(!started) {
-				System.out.println("Timer never started!");
+				print("ERROR - Timer never started!");
 			} else 
 			{
 				long time = System.nanoTime() - startTime;
-				System.out.printf("Timer ran for: %d ms\n", time/1000000L);
+				print(String.format("Timer ran for: %d ms", time/1000000L));
 				startTime = 0;
 			}
 		}
 	}
 	
+	private static int testCounter = 1;
+	private static int successCounter = 0;
+	
+	private static BufferedWriter outputFile = null;
 	private static Timer TIMER = new Test.Timer();
+	
+	public static void fail(String msg) {
+		print(String.format("Test %6d: FAILURE - %s", testCounter, msg));
+		increment(false);
+	}
+	
+	public static void success(String msg) {
+		print(String.format("Test %6d: SUCCESS - %s", testCounter, msg));
+		increment(true);
+	}
+	
+	//Tests if given statement is true.
+	public static void assertion(boolean b) {
+		print(String.format("Test %6d: %s - Assertion was %b.", testCounter, b ? "SUCCESS" : "FAILURE", b));
+		increment(b);
+	}
 	
 	//Tests if given object is null.
 	public static void isNull(Object a) {
 		boolean success = a == null;
-		System.out.printf("Test %6d: %s - Object was %s.\n", testCounter, success ? "SUCCESS" : "FAILURE", success ? "null" : "not null");
+		print(String.format("Test %6d: %s - Object was %s.", testCounter, success ? "SUCCESS" : "FAILURE", success ? "null" : "not null"));
 		increment(success);
 	}
 	
 	//Tests if given object is not null.
 	public static void notNull(Object a) {
 		boolean success = a != null;
-		System.out.printf("Test %6d: %s - Object was %s.\n", testCounter, success ? "SUCCESS" : "FAILURE", success ? "not null" : "null");
+		print(String.format("Test %6d: %s - Object was %s.", testCounter, success ? "SUCCESS" : "FAILURE", success ? "not null" : "null"));
 		increment(success);
-	}
-	
-	//Tests if given statement is true.
-	public static void assertion(boolean b) {
-		System.out.printf("Test %6d: %s - Assertion was %b.\n", testCounter, b ? "SUCCESS" : "FAILURE", b);
-		increment(b);
-	}
-	
-	public static void fail(String msg) {
-		System.out.printf("Test %6d: FAILURE - %s\n", testCounter, msg);
-		increment(false);
-	}
-	
-	public static void success(String msg) {
-		System.out.printf("Test %6d: SUCCESS - %s\n", testCounter, msg);
-		increment(true);
 	}
 	
 	//Tests equality between two objects.
@@ -149,8 +156,8 @@ public class Test {
 			success = false;
 		else 
 			success = a.equals(b);
-		
-		System.out.printf("Test %6d: %s - %s %s %s\n", testCounter, success ? "SUCCESS" : "FAILURE", (a == null ? "(NULL)" : a.toString()), success ? "=" : "!=", (b == null ? "(NULL)" : b.toString()));
+
+		print(String.format("Test %6d: %s - %s %s %s", testCounter, success ? "SUCCESS" : "FAILURE", (a == null ? "(NULL)" : a.toString()), success ? "=" : "!=", (b == null ? "(NULL)" : b.toString())));
 		increment(success);
 	}
 	
@@ -164,13 +171,13 @@ public class Test {
 				if(m1.length != m2.length || 
 						m1[row].length != m2[row].length ||
 						m1[row][col] != m2[row][col]) {
-					System.out.printf("%d != %d at %d, %d\n", m1[row][col], m2[row][col], row, col);
+					print(String.format("%d != %d at %d, %d\n", m1[row][col], m2[row][col], row, col));
 					success = false;
 				}
 			}
 		}
 		
-		System.out.printf("Test %06d: %s - matrix1 %s matrix2\n", testCounter, success ? "SUCCESS" : "FAILURE", success ? "=" : "!=");
+		print(String.format("Test %06d: %s - matrix1 %s matrix2", testCounter, success ? "SUCCESS" : "FAILURE", success ? "=" : "!="));
 		increment(success);
 	}
 	
@@ -183,21 +190,38 @@ public class Test {
 	
 	//Prints a nice header
 	public static void header(String header) {
-		System.out.printf("-----%s : Tests so far: %d/%d----\n", header, successCounter, testCounter-1);
+		print(String.format("-----%s : Tests so far: %d/%d----", header, successCounter, testCounter-1));
 	}
 	
 	//Prints the results of all tests to this point
 	public static void results() {
 		int nTests = testCounter - 1;
-		System.out.printf("----------\n%d/%d tests succeeded.\n", successCounter, nTests);
+		print(String.format("----------\n%d/%d tests succeeded.", successCounter, nTests));
 		if(successCounter == nTests)
-			System.out.printf("All tests pass!\n");
+			print("All tests pass!");
 		else
-			System.out.printf("%d tests failed...\n", nTests - successCounter);
+			print(String.format("%d tests failed...", nTests - successCounter));
+	}
+	
+	public static void startLog() {
+		try {
+			outputFile = new BufferedWriter(new FileWriter("./src/testing/log.txt"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void writeLog() {
+		try {
+			outputFile.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	//Outputs a matrix to stdout
-	public static void log(int[][] matrix) {
+	public static void print(int[][] matrix) {
 		StringBuilder sb = new StringBuilder();
 		
 		for(int x = 0; x < matrix.length; x++) {
@@ -212,17 +236,26 @@ public class Test {
 		log(sb.toString());
 	}
 	
-	//Outputs a string to stdout
-	public static void log(String s) {
-		System.out.println(s);
+	private static void log(String s) {
+		if(outputFile != null) {
+			try {
+				outputFile.write(s + "\n");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
-	//Outputs an object to stdout
-	public static void log(Object o) {
+	public static void print(String s) {
+		System.out.println(s);
+		log(s);
+	}
+	
+	public static void print(Object o) {
 		log(o.toString());
 	}
 	
-	public static void log(int[] array) {
+	public static void print(int[] array) {
 		log(Arrays.toString(array));
 	}
 	
@@ -235,7 +268,7 @@ public class Test {
 		if(sb.charAt(sb.length()-1) == ',')
 			sb.deleteCharAt(sb.length()-1);
 		sb.append("]");
-		System.out.println(sb.toString());
+		log(sb.toString());
 	}
 	
 	public static void timerStart() {
@@ -276,10 +309,14 @@ public class Test {
 			BooleanEvaluation.class, Coins.class, Fibonacci.class, MagicIndex.class, NQueens.class,
 			PaintFill.class, Parens.class, Pathfinding.class, Permutations.class, PowerSet.class,
 			RecursiveMultiply.class, RobotInAGrid.class, StackOfBoxes.class, TowersOfHanoi.class, TripleStep.class,
+			SplitNumber.class,
 			
 			//data structures
 			BArrayList.class, BHashMap.class, BHashSet.class, BLinkedList.class, BLinkedNode.class, 
-			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class,
+			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class, BBitArray.class,
+			
+			//sorting and searching
+			Sorts.class,
 			
 			//uncategorized
 			IsPrime.class
@@ -288,7 +325,8 @@ public class Test {
 	//Runs all tests
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] a) {
-		log("Running all tests!");
+		startLog();
+		print("Running all tests!");
 		try {
 			final Object[] args = new Object[1];
 			args[0] = new String[] {};
@@ -298,8 +336,9 @@ public class Test {
 			}
 			
 		} catch (Exception e) {
-			log("Failed to run tests... " + e.toString());
+			print("Failed to run tests... " + e.toString());
 		}
-		log("All done!");
+		print("All done!");
+		writeLog();
 	}
 }

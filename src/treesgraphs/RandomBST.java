@@ -319,7 +319,7 @@ public class RandomBST<T extends Comparable<T>> {
 		}
 		
 		for(Integer key : freqMap.keySet()) {
-			Test.log(key + " : " + freqMap.get(key));
+			Test.print(key + " : " + freqMap.get(key));
 			Test.assertion(freqMap.get(key) > (nRolls / nPossibilities * 0.9));
 		}
 		

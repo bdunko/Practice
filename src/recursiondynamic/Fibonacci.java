@@ -49,7 +49,7 @@ public class Fibonacci {
 		Test.equals(fib(8), 21L);
 		Test.equals(fib(9), 34L);
 		Test.equals(fib(10), 55L);
-		//Test.equals(fib(50), 12586269025L); //timeout
+		//Test.equals(fib(50), 12586269025L); //very slow
 		Test.timerReportAndReset();
 		
 		Test.header("(dynamic version)");

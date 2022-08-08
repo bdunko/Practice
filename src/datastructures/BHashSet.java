@@ -39,7 +39,7 @@ public class BHashSet<T> {
 	
 	public boolean remove(T elem) {
 		int hash = Math.abs(elem.hashCode() % NUM_BUCKETS);
-		Test.log(hash);
+		Test.print(hash);
 		
 		List<T> bucket = buckets.get(hash);
 		boolean didRemove = bucket.remove(elem);

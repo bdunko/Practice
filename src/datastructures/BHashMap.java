@@ -160,7 +160,7 @@ public class BHashMap<K, V> {
 		Test.equals(hm.get(123234), "bignum");
 		Test.equals(hm.size(), 3);
 		Test.isNull(hm.get(0));
-		Test.log(hm.toString());
+		Test.print(hm.toString());
 		
 		Test.header("containsKey/containsValue");
 		Test.assertion(hm.containsKey(121));
@@ -176,7 +176,7 @@ public class BHashMap<K, V> {
 		Test.isNull(hm.remove(121));
 		Test.isNull(hm.remove(56));
 		Test.equals(hm.size(), 2);
-		Test.log(hm.toString());
+		Test.print(hm.toString());
 		
 		Test.header("clear");
 		hm.clear();
@@ -184,7 +184,7 @@ public class BHashMap<K, V> {
 		Test.isNull(hm.get(123234));
 		Test.assertion(!hm.containsValue("FourFiveSix"));
 		
-		Test.log(hm.toString());
+		Test.print(hm.toString());
 		
 		Test.results();
 	}

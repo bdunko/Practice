@@ -54,8 +54,6 @@ public class Sorts {
 		}
 	}
 	
-	
-	
 	public static <T extends Comparable<T>> void mergeSort(T[] array) {
 		//can improve performance slightly by creating temp array here
 		//and passing it down, reusing it for each merge
@@ -65,6 +63,8 @@ public class Sorts {
 		mergeSort(array, 0, array.length-1, temp);
 	}
 	
+	//split repeatedly until subarrays is 2 elements large (meaning we have two sorted subarrays of 1 elem each)
+	//then repeatedly merge until full array is sorted
 	private static <T extends Comparable<T>> void mergeSort(T[] array, int start, int end, T[] temp) {
 		if(start >= end) //base case
 			return;
@@ -125,6 +125,10 @@ public class Sorts {
 		quickSort(array, 0, array.length-1);
 	}
 	
+	//selects a pivot value, sorts all value less to left and all greater to right
+	//at end of this process, pivot must be in correct spot in sorted array
+	//then divides the problem into the left and right sides, selects new pivots in left and right subarrays
+	//repeat until all values have been pivot once
 	private static <T extends Comparable<T>> void quickSort(T[] array, int left, int right) {
 		if(left < right) {
 			int index = partition(array, left, right);
@@ -230,11 +234,16 @@ public class Sorts {
 		}
 	}
 	
-	public static void radixCountingSort(int[] array, int n, int exp) {
+	//modified counting sort used for radix sort
+	//takes in an 'exp', telling what digit to sort on
+	//for example if exp = 1, uses 1s digit
+	//if exp = 10, uses 10s digit
+	//if exp = 100, uses 100s digit...
+	public static void radixCountingSort(int[] array, int exp) {
         int counts[] = new int[10];
         Arrays.fill(counts, 0);
   
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < array.length; i++) {
         	int digit = (array[i]/exp) % 10; //get digit
             counts[digit]++; //increment count for that digit
         }
@@ -248,7 +257,7 @@ public class Sorts {
         }
   
         // Build the output array
-        int sorted[] = new int[n]; //output array
+        int sorted[] = new int[array.length]; //output array
         
         for(int i = 0; i < array.length; i++) {
         	int elem = array[i];
@@ -258,14 +267,17 @@ public class Sorts {
         }
   
         //copy back to original array
-        for(int i = 0; i < n; i++)
+        for(int i = 0; i < array.length; i++)
         	array[i] = sorted[i];
 	  }
 	
 	public static void radixSort(int[] array) {
 		int max = max(array);
+		
+		//perform repeated counting sorts
+		//first sort on 1s digit, then 10s, then 100s... 
 		for(int place = 1; max / place > 0; place *= 10)
-			radixCountingSort(array, array.length, place);
+			radixCountingSort(array, place);
 	}
 	
 	private static <T extends Comparable<T>> void verify(T[] array) {

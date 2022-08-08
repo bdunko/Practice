@@ -210,7 +210,7 @@ public class BArrayList<E> {
 		Test.equals(bar.indexOf("0"), 1);
 		Test.equals(bar.indexOf("WORLD"), 0);
 		Test.equals(bar.indexOf("99"), 100);
-		Test.log(bar.toString());
+		Test.print(bar.toString());
 		
 		//Test remove
 		Test.header("remove");
@@ -236,7 +236,7 @@ public class BArrayList<E> {
 		Test.equals(bar.indexOf("HI"), 5);
 		Test.equals(bar.size(), 99);
 		Test.assertion(!bar.contains("5"));
-		Test.log(bar.toString());
+		Test.print(bar.toString());
 		
 		//Test clear
 		Test.header("clear");

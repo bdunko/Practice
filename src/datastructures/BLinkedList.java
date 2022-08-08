@@ -295,7 +295,7 @@ public class BLinkedList<E> {
 		Test.assertion(list.add(0, 0));
 		Test.assertion(list.add(2, 2));
 		Test.assertion(list.add(4, 4));
-		Test.log(list);
+		Test.print(list);
 		Test.equals(list.size(), 6);
 		Test.assertion(list.add(6, 6));
 		Test.equals(list.size(), 7);
@@ -312,7 +312,7 @@ public class BLinkedList<E> {
 		Test.equals(list.size(), 0);
 		Test.assertion(list.isEmpty());
 		
-		Test.log(list);
+		Test.print(list);
 		
 		Test.results();
 		
@@ -359,7 +359,7 @@ public class BLinkedList<E> {
 		Test.equals(list.size(), 10);
 		iter.add(10000);
 		Test.equals(list.size(), 11);
-		Test.log(list);
+		Test.print(list);
 		Test.equals(iter.prev(), Integer.valueOf(10000));
 		Test.equals(iter.next(), Integer.valueOf(10000));
 		Test.equals(iter.next(), Integer.valueOf(0));
@@ -397,7 +397,7 @@ public class BLinkedList<E> {
 		Test.equals(iter.next(), Integer.valueOf(2));
 		Test.equals(iter.prev(), Integer.valueOf(2));
 		Test.equals(iter.prev(), Integer.valueOf(0));
-		Test.log(list.toString());
+		Test.print(list.toString());
 		
 		iter = list.iterator();
 		while(iter.hasNext()) {

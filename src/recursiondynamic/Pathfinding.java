@@ -29,7 +29,6 @@ public class Pathfinding {
 		
 		//Try to go LEFT
 		if(x-1 >= 0 && visited[x-1][y] != true) {
-			System.out.println("Try LEFT");
 			List<Direction> path = findPathHelper(grid, visited, x-1, y);
 			if(path != null) {
 				path.add(Direction.LEFT);
