@@ -28,4 +28,13 @@ public class Util {
 	public static int binaryRightChildFor(int k) {
 		return (k*2) + 2;
 	}
+	
+	//sleeps current thread for given amount of time
+	public static void sleep(int ms) {
+		try {
+			Thread.sleep(ms);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }

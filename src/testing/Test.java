@@ -1,8 +1,12 @@
 package testing;
 
 import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Formatter;
 
@@ -17,6 +21,7 @@ import arraysstrings.StringPermutation;
 import arraysstrings.StringRotation;
 import arraysstrings.SubarraySum;
 import arraysstrings.URLify;
+import arraysstrings.WordFrequencies;
 import bitmanip.BinaryToString;
 import bitmanip.BitBasics;
 import bitmanip.Conversion;
@@ -26,6 +31,7 @@ import bitmanip.Insertion;
 import bitmanip.NextNumber;
 import bitmanip.PairwiseSwap;
 import bitmanip.PowersOfTwo;
+import bitmanip.SwapInPlace;
 import datastructures.BArrayList;
 import datastructures.BBitArray;
 import datastructures.BDeque;
@@ -60,13 +66,25 @@ import recursiondynamic.SplitNumber;
 import recursiondynamic.StackOfBoxes;
 import recursiondynamic.TowersOfHanoi;
 import recursiondynamic.TripleStep;
+import sortsearch.FindDuplicates;
+import sortsearch.GroupAnagrams;
+import sortsearch.PeaksAndValleys;
+import sortsearch.RankFromStream;
+import sortsearch.SearchInRotated;
+import sortsearch.SearchSortedNoSize;
+import sortsearch.SortedMatrixSearch;
+import sortsearch.SortedMerge;
 import sortsearch.Sorts;
+import sortsearch.SparseSearch;
 import stacksqueues.AnimalShelter;
 import stacksqueues.QueueViaStacks;
 import stacksqueues.SetOfStacks;
 import stacksqueues.SortStack;
 import stacksqueues.StackMin;
 import stacksqueues.ThreeInOne;
+import threads.CallInOrder;
+import threads.FizzBuzz;
+import threads.Locks;
 import treesgraphs.BSTSequences;
 import treesgraphs.BinaryTraversals;
 import treesgraphs.BinaryTreeHeight;
@@ -82,7 +100,10 @@ import treesgraphs.PathsWithSum;
 import treesgraphs.RandomBST;
 import treesgraphs.TreeBalanced;
 import treesgraphs.VerifyBST;
+import uncategorized.FactorialZeroes;
+import uncategorized.Intersection;
 import uncategorized.IsPrime;
+import uncategorized.TicTacToeWin;
 
 //Simple unit testing framework
 public class Test {
@@ -279,6 +300,49 @@ public class Test {
 		TIMER.reportAndReset();
 	}
 	
+	private static ByteArrayOutputStream stdout_redirect;
+	
+	public static void redirectStdoutToString() {
+		if(stdout_redirect != null) {
+			log("ERROR - Standard out is already being redirected to a string!");
+			return;
+		}
+
+		//redirect stdout to stream
+		stdout_redirect = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(stdout_redirect));
+	}
+	
+	public static void restoreStdoutAndTestStdoutEquals(String expected) {
+		if(stdout_redirect == null) {
+			log("ERROR - Standard out isn't being redirected to a string!");
+			return;
+		}
+		
+		//restore normal functionality
+		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
+		
+		//test if stdout was as expected
+		Test.equals(stdout_redirect.toString(), expected);
+		stdout_redirect = null;
+	}
+	
+	public static String restoreStdoutAndGet() {
+		if(stdout_redirect == null) {
+			log("ERROR - Standard out isn't being redirected to a string!");
+			return "";
+		}
+		
+		//restore normal functionality
+		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
+		
+		//return stdout string
+		String str = stdout_redirect.toString();
+		stdout_redirect = null;
+		
+		return str;
+	}
+	
 	//List of all classes to be tested
 	//Each class must have a main method which contains its tests
 	@SuppressWarnings("rawtypes")
@@ -286,9 +350,9 @@ public class Test {
 			//strings/arrays
 			IsUnique.class, MatrixRotation.class, MatrixZero.class, OneAway.class, PalindromePermutation.class,
 			StringPermutation.class, StringCompression.class, StringRotation.class, URLify.class, BinarySearch.class,
-			SubarraySum.class,
+			SubarraySum.class, WordFrequencies.class,
 			
-			//linked lists
+			//linked lists 
 			DeleteMiddle.class, KthToLast.class, ListIntersection.class, LoopDetection.class, ListPalindrome.class,
 			LoopDetection.class, ListPartition.class, RemoveDuplicates.class, SumLists.class,
 			
@@ -303,7 +367,7 @@ public class Test {
 			
 			//bit manipulation
 			BitBasics.class, BinaryToString.class, FlipBitToWin.class, Insertion.class, NextNumber.class,
-			Conversion.class, PairwiseSwap.class, PowersOfTwo.class, DrawLine.class,
+			Conversion.class, PairwiseSwap.class, PowersOfTwo.class, DrawLine.class, SwapInPlace.class,
 			
 			//recursion and dynamic programming
 			BooleanEvaluation.class, Coins.class, Fibonacci.class, MagicIndex.class, NQueens.class,
@@ -316,10 +380,14 @@ public class Test {
 			BStringBuilder.class, BDeque.class, BMinHeap.class, BMaxHeap.class, BBitArray.class,
 			
 			//sorting and searching
-			Sorts.class,
+			Sorts.class, FindDuplicates.class, GroupAnagrams.class, PeaksAndValleys.class, RankFromStream.class,
+			SearchInRotated.class, SearchSortedNoSize.class, SortedMatrixSearch.class, SortedMerge.class, SparseSearch.class,
+			
+			//threading
+			FizzBuzz.class, CallInOrder.class, Locks.class,
 			
 			//uncategorized
-			IsPrime.class
+			IsPrime.class, Intersection.class, TicTacToeWin.class, FactorialZeroes.class
 			};
 	
 	//Runs all tests

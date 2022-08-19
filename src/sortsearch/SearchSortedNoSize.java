@@ -19,7 +19,12 @@ public class SearchSortedNoSize {
 	}
 	
 	private static int searchListy(Listy listy, int target) {
-		return binSearchListy(listy, 0, Integer.MAX_VALUE, target);
+		//estimate length of listy
+		int startingMax = 1;
+		while(listy.elementAt(startingMax) != -1)
+			startingMax *= 2;
+		
+		return binSearchListy(listy, 0, startingMax, target);
 	}
 	
 	private static int binSearchListy(Listy listy, int min, int max, int target) {
