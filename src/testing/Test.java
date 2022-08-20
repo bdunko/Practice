@@ -100,9 +100,13 @@ import treesgraphs.PathsWithSum;
 import treesgraphs.RandomBST;
 import treesgraphs.TreeBalanced;
 import treesgraphs.VerifyBST;
+import uncategorized.EnglishInt;
 import uncategorized.FactorialZeroes;
 import uncategorized.Intersection;
 import uncategorized.IsPrime;
+import uncategorized.LivingPeople;
+import uncategorized.MaxNoIf;
+import uncategorized.OperationsOnlyAddition;
 import uncategorized.TicTacToeWin;
 
 //Simple unit testing framework
@@ -387,7 +391,8 @@ public class Test {
 			FizzBuzz.class, CallInOrder.class, Locks.class,
 			
 			//uncategorized
-			IsPrime.class, Intersection.class, TicTacToeWin.class, FactorialZeroes.class
+			IsPrime.class, Intersection.class, TicTacToeWin.class, FactorialZeroes.class, MaxNoIf.class,
+			EnglishInt.class, OperationsOnlyAddition.class, LivingPeople.class
 			};
 	
 	//Runs all tests
