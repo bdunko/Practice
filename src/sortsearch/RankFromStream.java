@@ -72,6 +72,8 @@ public class RankFromStream {
 	}
 	
 	public static void main(String[] args) {
+		root = null;
+		
 		Test.header("RankFromStream");
 		
 		Test.equals(rankOf(1), 0);

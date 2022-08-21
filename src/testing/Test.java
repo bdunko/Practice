@@ -100,13 +100,17 @@ import treesgraphs.PathsWithSum;
 import treesgraphs.RandomBST;
 import treesgraphs.TreeBalanced;
 import treesgraphs.VerifyBST;
+import uncategorized.ContiguousSequence;
+import uncategorized.DivingBoard;
 import uncategorized.EnglishInt;
 import uncategorized.FactorialZeroes;
 import uncategorized.Intersection;
 import uncategorized.IsPrime;
 import uncategorized.LivingPeople;
+import uncategorized.MasterMind;
 import uncategorized.MaxNoIf;
 import uncategorized.OperationsOnlyAddition;
+import uncategorized.PatternMatching;
 import uncategorized.TicTacToeWin;
 
 //Simple unit testing framework
@@ -177,7 +181,9 @@ public class Test {
 	//Also tests equality between primitives thanks to autoboxing
 	public static void equals(Object a, Object b) {
 		boolean success;
-		if(a == null || b == null)
+		if(a == null && b == null)
+			success = true;
+		else if(a == null || b == null)
 			success = false;
 		else 
 			success = a.equals(b);
@@ -392,7 +398,8 @@ public class Test {
 			
 			//uncategorized
 			IsPrime.class, Intersection.class, TicTacToeWin.class, FactorialZeroes.class, MaxNoIf.class,
-			EnglishInt.class, OperationsOnlyAddition.class, LivingPeople.class
+			EnglishInt.class, OperationsOnlyAddition.class, LivingPeople.class, DivingBoard.class, MasterMind.class,
+			ContiguousSequence.class, PatternMatching.class
 			};
 	
 	//Runs all tests
@@ -413,5 +420,6 @@ public class Test {
 		}
 		print("All done!");
 		writeLog();
+		
 	}
 }
