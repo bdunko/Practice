@@ -5,6 +5,8 @@ import java.util.List;
 
 import testing.Test;
 
+//Given an equation as a string, consisting only of positive integers and +, -, *, and /,
+//calculate the result
 public class Calculator {
 	
 	private static class Term {
