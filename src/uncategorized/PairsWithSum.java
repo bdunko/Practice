@@ -8,6 +8,7 @@ import java.util.List;
 import testing.Test;
 import utility.Util.Pair;
 
+//Given two input arrays and a target sum, return all pairs of numbers that sum to the target
 public class PairsWithSum {
 
 	public static List<Pair> pairsWithSum(int[] array1, int [] array2, int sum) {

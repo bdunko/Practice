@@ -100,6 +100,7 @@ import treesgraphs.PathsWithSum;
 import treesgraphs.RandomBST;
 import treesgraphs.TreeBalanced;
 import treesgraphs.VerifyBST;
+import uncategorized.Calculator;
 import uncategorized.ContiguousSequence;
 import uncategorized.DivingBoard;
 import uncategorized.EnglishInt;
@@ -110,7 +111,11 @@ import uncategorized.LivingPeople;
 import uncategorized.MasterMind;
 import uncategorized.MaxNoIf;
 import uncategorized.OperationsOnlyAddition;
+import uncategorized.PairsWithSum;
 import uncategorized.PatternMatching;
+import uncategorized.PondSizes;
+import uncategorized.Rand7FromRand5;
+import uncategorized.SumSwap;
 import uncategorized.TicTacToeWin;
 
 //Simple unit testing framework
@@ -409,7 +414,8 @@ public class Test {
 			//uncategorized
 			IsPrime.class, Intersection.class, TicTacToeWin.class, FactorialZeroes.class, MaxNoIf.class,
 			EnglishInt.class, OperationsOnlyAddition.class, LivingPeople.class, DivingBoard.class, MasterMind.class,
-			ContiguousSequence.class, PatternMatching.class
+			ContiguousSequence.class, PatternMatching.class, PondSizes.class, SumSwap.class, Rand7FromRand5.class,
+			PairsWithSum.class, Calculator.class
 			};
 	
 	//Runs all tests

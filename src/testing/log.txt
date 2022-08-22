@@ -255,404 +255,404 @@ Test    175: SUCCESS - Assertion was true.
 Test    176: SUCCESS - Assertion was true.
 Test    177: SUCCESS - Assertion was true.
 -----partition : Tests so far: 177/177----
-Test    178: SUCCESS - 32 = 32
-Test    179: SUCCESS - 32 = 32
+Test    178: SUCCESS - 4 = 4
+Test    179: SUCCESS - 4 = 4
 Test    180: SUCCESS - Assertion was true.
 Test    181: SUCCESS - Assertion was true.
-Test    182: SUCCESS - 3 = 3
-Test    183: SUCCESS - 3 = 3
+Test    182: SUCCESS - 33 = 33
+Test    183: SUCCESS - 33 = 33
 Test    184: SUCCESS - Assertion was true.
 Test    185: SUCCESS - Assertion was true.
-Test    186: SUCCESS - 23 = 23
-Test    187: SUCCESS - 23 = 23
+Test    186: SUCCESS - 35 = 35
+Test    187: SUCCESS - 35 = 35
 Test    188: SUCCESS - Assertion was true.
 Test    189: SUCCESS - Assertion was true.
-Test    190: SUCCESS - 19 = 19
-Test    191: SUCCESS - 19 = 19
+Test    190: SUCCESS - 39 = 39
+Test    191: SUCCESS - 39 = 39
 Test    192: SUCCESS - Assertion was true.
 Test    193: SUCCESS - Assertion was true.
-Test    194: SUCCESS - 3 = 3
-Test    195: SUCCESS - 3 = 3
+Test    194: SUCCESS - 45 = 45
+Test    195: SUCCESS - 45 = 45
 Test    196: SUCCESS - Assertion was true.
 Test    197: SUCCESS - Assertion was true.
-Test    198: SUCCESS - 32 = 32
-Test    199: SUCCESS - 32 = 32
+Test    198: SUCCESS - 9 = 9
+Test    199: SUCCESS - 9 = 9
 Test    200: SUCCESS - Assertion was true.
 Test    201: SUCCESS - Assertion was true.
-Test    202: SUCCESS - 32 = 32
-Test    203: SUCCESS - 32 = 32
+Test    202: SUCCESS - 6 = 6
+Test    203: SUCCESS - 6 = 6
 Test    204: SUCCESS - Assertion was true.
 Test    205: SUCCESS - Assertion was true.
-Test    206: SUCCESS - 20 = 20
-Test    207: SUCCESS - 20 = 20
+Test    206: SUCCESS - 27 = 27
+Test    207: SUCCESS - 27 = 27
 Test    208: SUCCESS - Assertion was true.
 Test    209: SUCCESS - Assertion was true.
 Test    210: SUCCESS - 33 = 33
 Test    211: SUCCESS - 33 = 33
 Test    212: SUCCESS - Assertion was true.
 Test    213: SUCCESS - Assertion was true.
-Test    214: SUCCESS - 31 = 31
-Test    215: SUCCESS - 31 = 31
+Test    214: SUCCESS - 22 = 22
+Test    215: SUCCESS - 22 = 22
 Test    216: SUCCESS - Assertion was true.
 Test    217: SUCCESS - Assertion was true.
-Test    218: SUCCESS - 13 = 13
-Test    219: SUCCESS - 13 = 13
+Test    218: SUCCESS - 44 = 44
+Test    219: SUCCESS - 44 = 44
 Test    220: SUCCESS - Assertion was true.
 Test    221: SUCCESS - Assertion was true.
-Test    222: SUCCESS - 45 = 45
-Test    223: SUCCESS - 45 = 45
+Test    222: SUCCESS - 42 = 42
+Test    223: SUCCESS - 42 = 42
 Test    224: SUCCESS - Assertion was true.
 Test    225: SUCCESS - Assertion was true.
-Test    226: SUCCESS - 41 = 41
-Test    227: SUCCESS - 41 = 41
+Test    226: SUCCESS - 17 = 17
+Test    227: SUCCESS - 17 = 17
 Test    228: SUCCESS - Assertion was true.
 Test    229: SUCCESS - Assertion was true.
-Test    230: SUCCESS - 44 = 44
-Test    231: SUCCESS - 44 = 44
+Test    230: SUCCESS - 21 = 21
+Test    231: SUCCESS - 21 = 21
 Test    232: SUCCESS - Assertion was true.
 Test    233: SUCCESS - Assertion was true.
-Test    234: SUCCESS - 29 = 29
-Test    235: SUCCESS - 29 = 29
+Test    234: SUCCESS - 22 = 22
+Test    235: SUCCESS - 22 = 22
 Test    236: SUCCESS - Assertion was true.
 Test    237: SUCCESS - Assertion was true.
-Test    238: SUCCESS - 2 = 2
-Test    239: SUCCESS - 2 = 2
+Test    238: SUCCESS - 15 = 15
+Test    239: SUCCESS - 15 = 15
 Test    240: SUCCESS - Assertion was true.
 Test    241: SUCCESS - Assertion was true.
-Test    242: SUCCESS - 49 = 49
-Test    243: SUCCESS - 49 = 49
+Test    242: SUCCESS - 6 = 6
+Test    243: SUCCESS - 6 = 6
 Test    244: SUCCESS - Assertion was true.
 Test    245: SUCCESS - Assertion was true.
 Test    246: SUCCESS - 23 = 23
 Test    247: SUCCESS - 23 = 23
 Test    248: SUCCESS - Assertion was true.
 Test    249: SUCCESS - Assertion was true.
-Test    250: SUCCESS - 18 = 18
-Test    251: SUCCESS - 18 = 18
+Test    250: SUCCESS - 34 = 34
+Test    251: SUCCESS - 34 = 34
 Test    252: SUCCESS - Assertion was true.
 Test    253: SUCCESS - Assertion was true.
-Test    254: SUCCESS - 16 = 16
-Test    255: SUCCESS - 16 = 16
+Test    254: SUCCESS - 5 = 5
+Test    255: SUCCESS - 5 = 5
 Test    256: SUCCESS - Assertion was true.
 Test    257: SUCCESS - Assertion was true.
-Test    258: SUCCESS - 22 = 22
-Test    259: SUCCESS - 22 = 22
+Test    258: SUCCESS - 42 = 42
+Test    259: SUCCESS - 42 = 42
 Test    260: SUCCESS - Assertion was true.
 Test    261: SUCCESS - Assertion was true.
-Test    262: SUCCESS - 45 = 45
-Test    263: SUCCESS - 45 = 45
+Test    262: SUCCESS - 7 = 7
+Test    263: SUCCESS - 7 = 7
 Test    264: SUCCESS - Assertion was true.
 Test    265: SUCCESS - Assertion was true.
-Test    266: SUCCESS - 15 = 15
-Test    267: SUCCESS - 15 = 15
+Test    266: SUCCESS - 12 = 12
+Test    267: SUCCESS - 12 = 12
 Test    268: SUCCESS - Assertion was true.
 Test    269: SUCCESS - Assertion was true.
-Test    270: SUCCESS - 15 = 15
-Test    271: SUCCESS - 15 = 15
+Test    270: SUCCESS - 36 = 36
+Test    271: SUCCESS - 36 = 36
 Test    272: SUCCESS - Assertion was true.
 Test    273: SUCCESS - Assertion was true.
-Test    274: SUCCESS - 49 = 49
-Test    275: SUCCESS - 49 = 49
+Test    274: SUCCESS - 31 = 31
+Test    275: SUCCESS - 31 = 31
 Test    276: SUCCESS - Assertion was true.
 Test    277: SUCCESS - Assertion was true.
-Test    278: SUCCESS - 49 = 49
-Test    279: SUCCESS - 49 = 49
+Test    278: SUCCESS - 44 = 44
+Test    279: SUCCESS - 44 = 44
 Test    280: SUCCESS - Assertion was true.
 Test    281: SUCCESS - Assertion was true.
-Test    282: SUCCESS - 22 = 22
-Test    283: SUCCESS - 22 = 22
+Test    282: SUCCESS - 1 = 1
+Test    283: SUCCESS - 1 = 1
 Test    284: SUCCESS - Assertion was true.
 Test    285: SUCCESS - Assertion was true.
-Test    286: SUCCESS - 21 = 21
-Test    287: SUCCESS - 21 = 21
+Test    286: SUCCESS - 48 = 48
+Test    287: SUCCESS - 48 = 48
 Test    288: SUCCESS - Assertion was true.
 Test    289: SUCCESS - Assertion was true.
-Test    290: SUCCESS - 25 = 25
-Test    291: SUCCESS - 25 = 25
+Test    290: SUCCESS - 24 = 24
+Test    291: SUCCESS - 24 = 24
 Test    292: SUCCESS - Assertion was true.
 Test    293: SUCCESS - Assertion was true.
-Test    294: SUCCESS - 33 = 33
-Test    295: SUCCESS - 33 = 33
+Test    294: SUCCESS - 21 = 21
+Test    295: SUCCESS - 21 = 21
 Test    296: SUCCESS - Assertion was true.
 Test    297: SUCCESS - Assertion was true.
-Test    298: SUCCESS - 24 = 24
-Test    299: SUCCESS - 24 = 24
+Test    298: SUCCESS - 46 = 46
+Test    299: SUCCESS - 46 = 46
 Test    300: SUCCESS - Assertion was true.
 Test    301: SUCCESS - Assertion was true.
-Test    302: SUCCESS - 35 = 35
-Test    303: SUCCESS - 35 = 35
+Test    302: SUCCESS - 28 = 28
+Test    303: SUCCESS - 28 = 28
 Test    304: SUCCESS - Assertion was true.
 Test    305: SUCCESS - Assertion was true.
-Test    306: SUCCESS - 43 = 43
-Test    307: SUCCESS - 43 = 43
+Test    306: SUCCESS - 47 = 47
+Test    307: SUCCESS - 47 = 47
 Test    308: SUCCESS - Assertion was true.
 Test    309: SUCCESS - Assertion was true.
-Test    310: SUCCESS - 7 = 7
-Test    311: SUCCESS - 7 = 7
+Test    310: SUCCESS - 40 = 40
+Test    311: SUCCESS - 40 = 40
 Test    312: SUCCESS - Assertion was true.
 Test    313: SUCCESS - Assertion was true.
-Test    314: SUCCESS - 15 = 15
-Test    315: SUCCESS - 15 = 15
+Test    314: SUCCESS - 5 = 5
+Test    315: SUCCESS - 5 = 5
 Test    316: SUCCESS - Assertion was true.
 Test    317: SUCCESS - Assertion was true.
-Test    318: SUCCESS - 29 = 29
-Test    319: SUCCESS - 29 = 29
+Test    318: SUCCESS - 1 = 1
+Test    319: SUCCESS - 1 = 1
 Test    320: SUCCESS - Assertion was true.
 Test    321: SUCCESS - Assertion was true.
-Test    322: SUCCESS - 32 = 32
-Test    323: SUCCESS - 32 = 32
+Test    322: SUCCESS - 26 = 26
+Test    323: SUCCESS - 26 = 26
 Test    324: SUCCESS - Assertion was true.
 Test    325: SUCCESS - Assertion was true.
-Test    326: SUCCESS - 34 = 34
-Test    327: SUCCESS - 34 = 34
+Test    326: SUCCESS - 26 = 26
+Test    327: SUCCESS - 26 = 26
 Test    328: SUCCESS - Assertion was true.
 Test    329: SUCCESS - Assertion was true.
-Test    330: SUCCESS - 38 = 38
-Test    331: SUCCESS - 38 = 38
+Test    330: SUCCESS - 40 = 40
+Test    331: SUCCESS - 40 = 40
 Test    332: SUCCESS - Assertion was true.
 Test    333: SUCCESS - Assertion was true.
-Test    334: SUCCESS - 22 = 22
-Test    335: SUCCESS - 22 = 22
+Test    334: SUCCESS - 50 = 50
+Test    335: SUCCESS - 50 = 50
 Test    336: SUCCESS - Assertion was true.
 Test    337: SUCCESS - Assertion was true.
-Test    338: SUCCESS - 33 = 33
-Test    339: SUCCESS - 33 = 33
+Test    338: SUCCESS - 43 = 43
+Test    339: SUCCESS - 43 = 43
 Test    340: SUCCESS - Assertion was true.
 Test    341: SUCCESS - Assertion was true.
-Test    342: SUCCESS - 31 = 31
-Test    343: SUCCESS - 31 = 31
+Test    342: SUCCESS - 28 = 28
+Test    343: SUCCESS - 28 = 28
 Test    344: SUCCESS - Assertion was true.
 Test    345: SUCCESS - Assertion was true.
-Test    346: SUCCESS - 33 = 33
-Test    347: SUCCESS - 33 = 33
+Test    346: SUCCESS - 4 = 4
+Test    347: SUCCESS - 4 = 4
 Test    348: SUCCESS - Assertion was true.
 Test    349: SUCCESS - Assertion was true.
-Test    350: SUCCESS - 38 = 38
-Test    351: SUCCESS - 38 = 38
+Test    350: SUCCESS - 26 = 26
+Test    351: SUCCESS - 26 = 26
 Test    352: SUCCESS - Assertion was true.
 Test    353: SUCCESS - Assertion was true.
-Test    354: SUCCESS - 6 = 6
-Test    355: SUCCESS - 6 = 6
+Test    354: SUCCESS - 35 = 35
+Test    355: SUCCESS - 35 = 35
 Test    356: SUCCESS - Assertion was true.
 Test    357: SUCCESS - Assertion was true.
-Test    358: SUCCESS - 17 = 17
-Test    359: SUCCESS - 17 = 17
+Test    358: SUCCESS - 33 = 33
+Test    359: SUCCESS - 33 = 33
 Test    360: SUCCESS - Assertion was true.
 Test    361: SUCCESS - Assertion was true.
-Test    362: SUCCESS - 31 = 31
-Test    363: SUCCESS - 31 = 31
+Test    362: SUCCESS - 40 = 40
+Test    363: SUCCESS - 40 = 40
 Test    364: SUCCESS - Assertion was true.
 Test    365: SUCCESS - Assertion was true.
-Test    366: SUCCESS - 41 = 41
-Test    367: SUCCESS - 41 = 41
+Test    366: SUCCESS - 42 = 42
+Test    367: SUCCESS - 42 = 42
 Test    368: SUCCESS - Assertion was true.
 Test    369: SUCCESS - Assertion was true.
-Test    370: SUCCESS - 48 = 48
-Test    371: SUCCESS - 48 = 48
+Test    370: SUCCESS - 5 = 5
+Test    371: SUCCESS - 5 = 5
 Test    372: SUCCESS - Assertion was true.
 Test    373: SUCCESS - Assertion was true.
-Test    374: SUCCESS - 24 = 24
-Test    375: SUCCESS - 24 = 24
+Test    374: SUCCESS - 34 = 34
+Test    375: SUCCESS - 34 = 34
 Test    376: SUCCESS - Assertion was true.
 Test    377: SUCCESS - Assertion was true.
-Test    378: SUCCESS - 22 = 22
-Test    379: SUCCESS - 22 = 22
+Test    378: SUCCESS - 7 = 7
+Test    379: SUCCESS - 7 = 7
 Test    380: SUCCESS - Assertion was true.
 Test    381: SUCCESS - Assertion was true.
-Test    382: SUCCESS - 19 = 19
-Test    383: SUCCESS - 19 = 19
+Test    382: SUCCESS - 37 = 37
+Test    383: SUCCESS - 37 = 37
 Test    384: SUCCESS - Assertion was true.
 Test    385: SUCCESS - Assertion was true.
-Test    386: SUCCESS - 16 = 16
-Test    387: SUCCESS - 16 = 16
+Test    386: SUCCESS - 38 = 38
+Test    387: SUCCESS - 38 = 38
 Test    388: SUCCESS - Assertion was true.
 Test    389: SUCCESS - Assertion was true.
-Test    390: SUCCESS - 13 = 13
-Test    391: SUCCESS - 13 = 13
+Test    390: SUCCESS - 17 = 17
+Test    391: SUCCESS - 17 = 17
 Test    392: SUCCESS - Assertion was true.
 Test    393: SUCCESS - Assertion was true.
-Test    394: SUCCESS - 16 = 16
-Test    395: SUCCESS - 16 = 16
+Test    394: SUCCESS - 29 = 29
+Test    395: SUCCESS - 29 = 29
 Test    396: SUCCESS - Assertion was true.
 Test    397: SUCCESS - Assertion was true.
-Test    398: SUCCESS - 35 = 35
-Test    399: SUCCESS - 35 = 35
+Test    398: SUCCESS - 22 = 22
+Test    399: SUCCESS - 22 = 22
 Test    400: SUCCESS - Assertion was true.
 Test    401: SUCCESS - Assertion was true.
-Test    402: SUCCESS - 7 = 7
-Test    403: SUCCESS - 7 = 7
+Test    402: SUCCESS - 31 = 31
+Test    403: SUCCESS - 31 = 31
 Test    404: SUCCESS - Assertion was true.
 Test    405: SUCCESS - Assertion was true.
-Test    406: SUCCESS - 34 = 34
-Test    407: SUCCESS - 34 = 34
+Test    406: SUCCESS - 46 = 46
+Test    407: SUCCESS - 46 = 46
 Test    408: SUCCESS - Assertion was true.
 Test    409: SUCCESS - Assertion was true.
-Test    410: SUCCESS - 26 = 26
-Test    411: SUCCESS - 26 = 26
+Test    410: SUCCESS - 48 = 48
+Test    411: SUCCESS - 48 = 48
 Test    412: SUCCESS - Assertion was true.
 Test    413: SUCCESS - Assertion was true.
-Test    414: SUCCESS - 12 = 12
-Test    415: SUCCESS - 12 = 12
+Test    414: SUCCESS - 23 = 23
+Test    415: SUCCESS - 23 = 23
 Test    416: SUCCESS - Assertion was true.
 Test    417: SUCCESS - Assertion was true.
-Test    418: SUCCESS - 30 = 30
-Test    419: SUCCESS - 30 = 30
+Test    418: SUCCESS - 23 = 23
+Test    419: SUCCESS - 23 = 23
 Test    420: SUCCESS - Assertion was true.
 Test    421: SUCCESS - Assertion was true.
-Test    422: SUCCESS - 34 = 34
-Test    423: SUCCESS - 34 = 34
+Test    422: SUCCESS - 48 = 48
+Test    423: SUCCESS - 48 = 48
 Test    424: SUCCESS - Assertion was true.
 Test    425: SUCCESS - Assertion was true.
-Test    426: SUCCESS - 26 = 26
-Test    427: SUCCESS - 26 = 26
+Test    426: SUCCESS - 25 = 25
+Test    427: SUCCESS - 25 = 25
 Test    428: SUCCESS - Assertion was true.
 Test    429: SUCCESS - Assertion was true.
-Test    430: SUCCESS - 49 = 49
-Test    431: SUCCESS - 49 = 49
+Test    430: SUCCESS - 16 = 16
+Test    431: SUCCESS - 16 = 16
 Test    432: SUCCESS - Assertion was true.
 Test    433: SUCCESS - Assertion was true.
-Test    434: SUCCESS - 34 = 34
-Test    435: SUCCESS - 34 = 34
+Test    434: SUCCESS - 14 = 14
+Test    435: SUCCESS - 14 = 14
 Test    436: SUCCESS - Assertion was true.
 Test    437: SUCCESS - Assertion was true.
-Test    438: SUCCESS - 44 = 44
-Test    439: SUCCESS - 44 = 44
+Test    438: SUCCESS - 38 = 38
+Test    439: SUCCESS - 38 = 38
 Test    440: SUCCESS - Assertion was true.
 Test    441: SUCCESS - Assertion was true.
-Test    442: SUCCESS - 10 = 10
-Test    443: SUCCESS - 10 = 10
+Test    442: SUCCESS - 6 = 6
+Test    443: SUCCESS - 6 = 6
 Test    444: SUCCESS - Assertion was true.
 Test    445: SUCCESS - Assertion was true.
-Test    446: SUCCESS - 12 = 12
-Test    447: SUCCESS - 12 = 12
+Test    446: SUCCESS - 42 = 42
+Test    447: SUCCESS - 42 = 42
 Test    448: SUCCESS - Assertion was true.
 Test    449: SUCCESS - Assertion was true.
-Test    450: SUCCESS - 11 = 11
-Test    451: SUCCESS - 11 = 11
+Test    450: SUCCESS - 21 = 21
+Test    451: SUCCESS - 21 = 21
 Test    452: SUCCESS - Assertion was true.
 Test    453: SUCCESS - Assertion was true.
-Test    454: SUCCESS - 30 = 30
-Test    455: SUCCESS - 30 = 30
+Test    454: SUCCESS - 27 = 27
+Test    455: SUCCESS - 27 = 27
 Test    456: SUCCESS - Assertion was true.
 Test    457: SUCCESS - Assertion was true.
-Test    458: SUCCESS - 21 = 21
-Test    459: SUCCESS - 21 = 21
+Test    458: SUCCESS - 39 = 39
+Test    459: SUCCESS - 39 = 39
 Test    460: SUCCESS - Assertion was true.
 Test    461: SUCCESS - Assertion was true.
-Test    462: SUCCESS - 13 = 13
-Test    463: SUCCESS - 13 = 13
+Test    462: SUCCESS - 40 = 40
+Test    463: SUCCESS - 40 = 40
 Test    464: SUCCESS - Assertion was true.
 Test    465: SUCCESS - Assertion was true.
-Test    466: SUCCESS - 20 = 20
-Test    467: SUCCESS - 20 = 20
+Test    466: SUCCESS - 33 = 33
+Test    467: SUCCESS - 33 = 33
 Test    468: SUCCESS - Assertion was true.
 Test    469: SUCCESS - Assertion was true.
-Test    470: SUCCESS - 46 = 46
-Test    471: SUCCESS - 46 = 46
+Test    470: SUCCESS - 22 = 22
+Test    471: SUCCESS - 22 = 22
 Test    472: SUCCESS - Assertion was true.
 Test    473: SUCCESS - Assertion was true.
-Test    474: SUCCESS - 44 = 44
-Test    475: SUCCESS - 44 = 44
+Test    474: SUCCESS - 34 = 34
+Test    475: SUCCESS - 34 = 34
 Test    476: SUCCESS - Assertion was true.
 Test    477: SUCCESS - Assertion was true.
-Test    478: SUCCESS - 9 = 9
-Test    479: SUCCESS - 9 = 9
+Test    478: SUCCESS - 16 = 16
+Test    479: SUCCESS - 16 = 16
 Test    480: SUCCESS - Assertion was true.
 Test    481: SUCCESS - Assertion was true.
-Test    482: SUCCESS - 32 = 32
-Test    483: SUCCESS - 32 = 32
+Test    482: SUCCESS - 49 = 49
+Test    483: SUCCESS - 49 = 49
 Test    484: SUCCESS - Assertion was true.
 Test    485: SUCCESS - Assertion was true.
-Test    486: SUCCESS - 12 = 12
-Test    487: SUCCESS - 12 = 12
+Test    486: SUCCESS - 13 = 13
+Test    487: SUCCESS - 13 = 13
 Test    488: SUCCESS - Assertion was true.
 Test    489: SUCCESS - Assertion was true.
-Test    490: SUCCESS - 10 = 10
-Test    491: SUCCESS - 10 = 10
+Test    490: SUCCESS - 8 = 8
+Test    491: SUCCESS - 8 = 8
 Test    492: SUCCESS - Assertion was true.
 Test    493: SUCCESS - Assertion was true.
-Test    494: SUCCESS - 28 = 28
-Test    495: SUCCESS - 28 = 28
+Test    494: SUCCESS - 32 = 32
+Test    495: SUCCESS - 32 = 32
 Test    496: SUCCESS - Assertion was true.
 Test    497: SUCCESS - Assertion was true.
-Test    498: SUCCESS - 47 = 47
-Test    499: SUCCESS - 47 = 47
+Test    498: SUCCESS - 42 = 42
+Test    499: SUCCESS - 42 = 42
 Test    500: SUCCESS - Assertion was true.
 Test    501: SUCCESS - Assertion was true.
-Test    502: SUCCESS - 13 = 13
-Test    503: SUCCESS - 13 = 13
+Test    502: SUCCESS - 24 = 24
+Test    503: SUCCESS - 24 = 24
 Test    504: SUCCESS - Assertion was true.
 Test    505: SUCCESS - Assertion was true.
-Test    506: SUCCESS - 46 = 46
-Test    507: SUCCESS - 46 = 46
+Test    506: SUCCESS - 14 = 14
+Test    507: SUCCESS - 14 = 14
 Test    508: SUCCESS - Assertion was true.
 Test    509: SUCCESS - Assertion was true.
-Test    510: SUCCESS - 2 = 2
-Test    511: SUCCESS - 2 = 2
+Test    510: SUCCESS - 3 = 3
+Test    511: SUCCESS - 3 = 3
 Test    512: SUCCESS - Assertion was true.
 Test    513: SUCCESS - Assertion was true.
-Test    514: SUCCESS - 14 = 14
-Test    515: SUCCESS - 14 = 14
+Test    514: SUCCESS - 27 = 27
+Test    515: SUCCESS - 27 = 27
 Test    516: SUCCESS - Assertion was true.
 Test    517: SUCCESS - Assertion was true.
-Test    518: SUCCESS - 38 = 38
-Test    519: SUCCESS - 38 = 38
+Test    518: SUCCESS - 18 = 18
+Test    519: SUCCESS - 18 = 18
 Test    520: SUCCESS - Assertion was true.
 Test    521: SUCCESS - Assertion was true.
-Test    522: SUCCESS - 15 = 15
-Test    523: SUCCESS - 15 = 15
+Test    522: SUCCESS - 41 = 41
+Test    523: SUCCESS - 41 = 41
 Test    524: SUCCESS - Assertion was true.
 Test    525: SUCCESS - Assertion was true.
-Test    526: SUCCESS - 22 = 22
-Test    527: SUCCESS - 22 = 22
+Test    526: SUCCESS - 48 = 48
+Test    527: SUCCESS - 48 = 48
 Test    528: SUCCESS - Assertion was true.
 Test    529: SUCCESS - Assertion was true.
-Test    530: SUCCESS - 40 = 40
-Test    531: SUCCESS - 40 = 40
+Test    530: SUCCESS - 24 = 24
+Test    531: SUCCESS - 24 = 24
 Test    532: SUCCESS - Assertion was true.
 Test    533: SUCCESS - Assertion was true.
-Test    534: SUCCESS - 47 = 47
-Test    535: SUCCESS - 47 = 47
+Test    534: SUCCESS - 9 = 9
+Test    535: SUCCESS - 9 = 9
 Test    536: SUCCESS - Assertion was true.
 Test    537: SUCCESS - Assertion was true.
-Test    538: SUCCESS - 36 = 36
-Test    539: SUCCESS - 36 = 36
+Test    538: SUCCESS - 8 = 8
+Test    539: SUCCESS - 8 = 8
 Test    540: SUCCESS - Assertion was true.
 Test    541: SUCCESS - Assertion was true.
-Test    542: SUCCESS - 16 = 16
-Test    543: SUCCESS - 16 = 16
+Test    542: SUCCESS - 20 = 20
+Test    543: SUCCESS - 20 = 20
 Test    544: SUCCESS - Assertion was true.
 Test    545: SUCCESS - Assertion was true.
-Test    546: SUCCESS - 30 = 30
-Test    547: SUCCESS - 30 = 30
+Test    546: SUCCESS - 6 = 6
+Test    547: SUCCESS - 6 = 6
 Test    548: SUCCESS - Assertion was true.
 Test    549: SUCCESS - Assertion was true.
-Test    550: SUCCESS - 26 = 26
-Test    551: SUCCESS - 26 = 26
+Test    550: SUCCESS - 42 = 42
+Test    551: SUCCESS - 42 = 42
 Test    552: SUCCESS - Assertion was true.
 Test    553: SUCCESS - Assertion was true.
-Test    554: SUCCESS - 20 = 20
-Test    555: SUCCESS - 20 = 20
+Test    554: SUCCESS - 11 = 11
+Test    555: SUCCESS - 11 = 11
 Test    556: SUCCESS - Assertion was true.
 Test    557: SUCCESS - Assertion was true.
-Test    558: SUCCESS - 22 = 22
-Test    559: SUCCESS - 22 = 22
+Test    558: SUCCESS - 30 = 30
+Test    559: SUCCESS - 30 = 30
 Test    560: SUCCESS - Assertion was true.
 Test    561: SUCCESS - Assertion was true.
-Test    562: SUCCESS - 4 = 4
-Test    563: SUCCESS - 4 = 4
+Test    562: SUCCESS - 9 = 9
+Test    563: SUCCESS - 9 = 9
 Test    564: SUCCESS - Assertion was true.
 Test    565: SUCCESS - Assertion was true.
-Test    566: SUCCESS - 41 = 41
-Test    567: SUCCESS - 41 = 41
+Test    566: SUCCESS - 22 = 22
+Test    567: SUCCESS - 22 = 22
 Test    568: SUCCESS - Assertion was true.
 Test    569: SUCCESS - Assertion was true.
-Test    570: SUCCESS - 26 = 26
-Test    571: SUCCESS - 26 = 26
+Test    570: SUCCESS - 12 = 12
+Test    571: SUCCESS - 12 = 12
 Test    572: SUCCESS - Assertion was true.
 Test    573: SUCCESS - Assertion was true.
-Test    574: SUCCESS - 35 = 35
-Test    575: SUCCESS - 35 = 35
+Test    574: SUCCESS - 4 = 4
+Test    575: SUCCESS - 4 = 4
 Test    576: SUCCESS - Assertion was true.
 Test    577: SUCCESS - Assertion was true.
 ----------
@@ -1357,15 +1357,15 @@ Test   1163: SUCCESS - Object was null.
 Test   1164: SUCCESS - Object was null.
 Test   1165: SUCCESS - 3 = 3
 Test   1166: SUCCESS - 5 = 5
-17 : 2030
+17 : 2000
 Test   1167: SUCCESS - Assertion was true.
-3 : 1988
+3 : 1987
 Test   1168: SUCCESS - Assertion was true.
-7 : 1984
+7 : 1997
 Test   1169: SUCCESS - Assertion was true.
-9 : 2033
+9 : 1943
 Test   1170: SUCCESS - Assertion was true.
-10 : 1965
+10 : 2073
 Test   1171: SUCCESS - Assertion was true.
 ----------
 1171/1171 tests succeeded.
@@ -2076,7 +2076,7 @@ Test   1535: SUCCESS - 13 = 13
 Test   1536: SUCCESS - 5768 = 5768
 Test   1537: SUCCESS - 2555757 = 2555757
 Test   1538: SUCCESS - 53798080 = 53798080
-Timer ran for: 342 ms
+Timer ran for: 340 ms
 -----(dynamic version) : Tests so far: 1538/1538----
 Test   1539: SUCCESS - 1 = 1
 Test   1540: SUCCESS - 2 = 2
@@ -3466,11 +3466,11 @@ Test   2720: SUCCESS - 1972 = 1972
 All tests pass!
 -----DivingBoard : Tests so far: 2720/2720----
 Test   2721: SUCCESS - [3, 6] = [6, 3]
-Test   2722: SUCCESS - [6, 9, 12] = [9, 6, 12]
-Test   2723: SUCCESS - [18, 9, 12, 15] = [12, 15, 9, 18]
-Test   2724: SUCCESS - [18, 21, 24, 12, 15] = [24, 15, 18, 21, 12]
-Test   2725: SUCCESS - [32, 50, 5, 23, 41, 14] = [50, 5, 41, 32, 23, 14]
-Test   2726: SUCCESS - [16, 8, 9, 10, 11, 12, 13, 14, 15] = [9, 10, 11, 12, 13, 14, 15, 16, 8]
+Test   2722: SUCCESS - [6, 9, 12] = [6, 12, 9]
+Test   2723: SUCCESS - [18, 9, 12, 15] = [18, 12, 15, 9]
+Test   2724: SUCCESS - [18, 21, 24, 12, 15] = [18, 21, 12, 24, 15]
+Test   2725: SUCCESS - [32, 50, 5, 23, 41, 14] = [41, 32, 23, 14, 50, 5]
+Test   2726: SUCCESS - [16, 8, 9, 10, 11, 12, 13, 14, 15] = [12, 13, 14, 15, 16, 8, 9, 10, 11]
 ----------
 2726/2726 tests succeeded.
 All tests pass!
@@ -3510,5 +3510,53 @@ Test   2750: SUCCESS - true = true
 Test   2751: SUCCESS - true = true
 ----------
 2751/2751 tests succeeded.
+All tests pass!
+-----PondSizes : Tests so far: 2751/2751----
+Test   2752: SUCCESS - Ponds correct.
+Test   2753: SUCCESS - Ponds correct.
+Test   2754: SUCCESS - Ponds correct.
+Test   2755: SUCCESS - Ponds correct.
+----------
+2755/2755 tests succeeded.
+All tests pass!
+-----SumSwap : Tests so far: 2755/2755----
+Test   2756: SUCCESS - (1, 3) = (1, 3)
+Test   2757: SUCCESS - (3, 1) = (3, 1)
+Test   2758: SUCCESS - (NULL) = (NULL)
+Test   2759: SUCCESS - (2, 5) = (2, 5)
+----------
+2759/2759 tests succeeded.
+All tests pass!
+-----Rand7FromRand5 : Tests so far: 2759/2759----
+Test   2760: SUCCESS - Assertion was true.
+Test   2761: SUCCESS - Assertion was true.
+Test   2762: SUCCESS - Assertion was true.
+Test   2763: SUCCESS - Assertion was true.
+Test   2764: SUCCESS - Assertion was true.
+Test   2765: SUCCESS - Assertion was true.
+Test   2766: SUCCESS - Assertion was true.
+----------
+2766/2766 tests succeeded.
+All tests pass!
+-----PairsWithSum : Tests so far: 2766/2766----
+Test   2767: SUCCESS - Pair (10, 5) was correct.
+Test   2768: SUCCESS - Pair (5, 10) was correct.
+Test   2769: SUCCESS - Pair (8, 7) was correct.
+Test   2770: SUCCESS - Pair (5, 1) was correct.
+Test   2771: SUCCESS - Pair (4, 2) was correct.
+Test   2772: SUCCESS - Pair (3, 3) was correct.
+Test   2773: SUCCESS - Pair (2, 4) was correct.
+Test   2774: SUCCESS - Pair (1, 5) was correct.
+----------
+2774/2774 tests succeeded.
+All tests pass!
+-----Calculator : Tests so far: 2774/2774----
+Test   2775: SUCCESS - Assertion was true.
+Test   2776: SUCCESS - Assertion was true.
+Test   2777: SUCCESS - Assertion was true.
+Test   2778: SUCCESS - Assertion was true.
+Test   2779: SUCCESS - Assertion was true.
+----------
+2779/2779 tests succeeded.
 All tests pass!
 All done!
