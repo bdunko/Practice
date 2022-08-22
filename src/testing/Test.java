@@ -152,8 +152,18 @@ public class Test {
 		increment(false);
 	}
 	
+	public static void fail() {
+		print(String.format("Test %6d: FAILURE", testCounter));
+		increment(false);
+	}
+	
 	public static void success(String msg) {
 		print(String.format("Test %6d: SUCCESS - %s", testCounter, msg));
+		increment(true);
+	}
+	
+	public static void success() {
+		print(String.format("Test %6d: SUCCESS", testCounter));
 		increment(true);
 	}
 	

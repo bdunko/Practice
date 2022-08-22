@@ -1,36 +1,11 @@
 package uncategorized;
 
 import testing.Test;
+import utility.Util.Pair;
 
 //Given an array of integers, find the indices n and m such that, if you sorted the subarray from n to m, the entire array would be sorted
 //Find the smallest such sequence
 public class SubSort {
-
-	private static class Pair {
-		public int n, m;
-		
-		public Pair(int n, int m) {
-			this.n = n;
-			this.m = m;
-		}
-		
-		@Override
-		public boolean equals(Object other) {
-			if(other == null)
-				return false;
-			if(!(other instanceof Pair))
-				return false;
-			
-			Pair otherPair = (Pair) other;
-			
-			return n == otherPair.n && m == otherPair.m;
-		}
-		
-		@Override
-		public String toString() {
-			return "(" + n + ", " + m + ")";
-		}
-	}
 	
 	private static Pair subSort(int[] array) {
 		if(array.length <= 1)

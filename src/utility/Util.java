@@ -2,6 +2,32 @@ package utility;
 
 public class Util {
 
+	public static class Pair {
+		public int n, m;
+		
+		public Pair(int n, int m) {
+			this.n = n;
+			this.m = m;
+		}
+		
+		@Override
+		public boolean equals(Object other) {
+			if(other == null)
+				return false;
+			if(!(other instanceof Pair))
+				return false;
+			
+			Pair otherPair = (Pair) other;
+			
+			return n == otherPair.n && m == otherPair.m;
+		}
+		
+		@Override
+		public String toString() {
+			return "(" + n + ", " + m + ")";
+		}
+	}
+	
 	public static int log2(int x) {
 		return log(x, 2);
 	}

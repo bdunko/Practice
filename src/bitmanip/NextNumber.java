@@ -10,10 +10,10 @@ public class NextNumber {
 		return (N & mask) != 0;
 	}
 	
-	public static class Pair {
+	public static class NextPair {
 		int nextSmallest, nextLargest;
 		
-		public Pair(int nextSmallest, int nextLargest) {
+		public NextPair(int nextSmallest, int nextLargest) {
 			this.nextLargest = nextLargest;
 			this.nextSmallest = nextSmallest;
 		}
@@ -28,7 +28,7 @@ public class NextNumber {
 		return ones;
 	}
 	
-	public static Pair nextNumberBrute(int num) {
+	public static NextPair nextNumberBrute(int num) {
 		if(num == 0)
 			return null;
 		
@@ -45,7 +45,7 @@ public class NextNumber {
 			largest++;
 		}
 		
-		return new Pair(smallest, largest);
+		return new NextPair(smallest, largest);
 	}
 	
 	//idea: find the rightmost 0 with a 1 to the right.
@@ -126,8 +126,8 @@ public class NextNumber {
 		return nextSmallest;
 	}
 	
-	public static Pair nextNumber(int num) {
-		return new Pair(nextSmallest(num), nextLargest(num));
+	public static NextPair nextNumber(int num) {
+		return new NextPair(nextSmallest(num), nextLargest(num));
 	}
 	
 	public static void main(String[] args) {

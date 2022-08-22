@@ -4,8 +4,6 @@ import testing.Test;
 
 //implement a max function without comparisons
 public class MaxNoIf {
-
-	
 	
 	private static int max(int a, int b) {
 		//cast to long to prevent overflow

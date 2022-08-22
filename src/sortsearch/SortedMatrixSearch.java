@@ -1,36 +1,11 @@
 package sortsearch;
 
 import testing.Test;
+import utility.Util.Pair;
 
 //Given a NxM matrix where rows and columns are sorted ascendingly,
 //implemenet a method to search the matrix for an element
 public class SortedMatrixSearch {
-
-	private static class Pair {
-		public int X, Y;
-		
-		public Pair(int X, int Y) {
-			this.X = X;
-			this.Y = Y;
-		}
-		
-		@Override
-		public boolean equals(Object other) {
-			if(other == null)
-				return false;
-			if(!(other instanceof Pair))
-				return false;
-			
-			Pair otherPair = (Pair) other;
-			
-			return otherPair.X == X && otherPair.Y == Y;
-		}
-		
-		@Override
-		public String toString() {
-			return "[" + X + "," + Y + "]";
-		}
-	}
 	
 //	public static Pair matrixSearch(int[][] matrix, int target) {		
 //		if(matrix.length == 0 || matrix[0].length == 0)
@@ -130,7 +105,7 @@ public class SortedMatrixSearch {
 					if(answer == null)
 						Test.fail(String.format("Answer was null, but should have been %d %d!", x, y));
 					else
-						Test.equals(testcase[answer.X][answer.Y], testcase[x][y]);
+						Test.equals(testcase[answer.n][answer.m], testcase[x][y]);
 				}
 			}
 			Test.isNull(matrixSearch(testcase, 8888888));
