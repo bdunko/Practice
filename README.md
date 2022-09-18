@@ -10,7 +10,13 @@ Implementation of Sorting Algorithms (found together in [Sorts](https://github.c
 * Radix Sort (for integers)
 
 Implementation of Data Structures:
-* [Array List] (BArrayList.java)
-* Linked List (BLinkedList.java)
-* Binary Search Tree (BBinarySearchTree.java)
-* 
+* [Array List] (https://github.com/bdunko/Practice/blob/master/src/datastructures/BArrayList.java)
+* [Linked List](https://github.com/bdunko/Practice/blob/master/src/datastructures/BLinkedList.java)
+* [Deque (Combined Stack + Queue)](https://github.com/bdunko/Practice/blob/master/src/datastructures/BDeque.java)
+* [Binary Search Tree](https://github.com/bdunko/Practice/blob/master/src/datastructures/BBinarySearchTree.java)
+* [Bit Array](https://github.com/bdunko/Practice/blob/master/src/datastructures/BBitArray.java)
+* [Min Heap](https://github.com/bdunko/Practice/blob/master/src/datastructures/BMinHeap.java) / [Max Heap](https://github.com/bdunko/Practice/blob/master/src/datastructures/BMaxHeap.java)
+* [Directed Graph](https://github.com/bdunko/Practice/blob/master/src/datastructures/BGraph.java)
+* [StringBuilder](https://github.com/bdunko/Practice/blob/master/src/datastructures/BStringBuilder.java)
+
+Some of these data structures expose internal nodes publically for ease of use in leetcode-style problems. A 'library' implementation would modify these not to expose internal state.
