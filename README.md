@@ -9,7 +9,7 @@ Implementation of Sorting Algorithms (found together in [Sorts](https://github.c
 * Quick Sort
 * Radix Sort (for integers)
 
-Implementation of Data Structures (found in datastructures)
+Implementation of Data Structures:
 * [Array List] (BArrayList.java)
 * Linked List (BLinkedList.java)
 * Binary Search Tree (BBinarySearchTree.java)
