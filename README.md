@@ -20,3 +20,5 @@ Implementation of Data Structures:
 * [StringBuilder](https://github.com/bdunko/Practice/blob/master/src/datastructures/BStringBuilder.java)
 
 Some of these data structures expose internal nodes publically for ease of use in leetcode-style problems. A 'library' implementation would modify these not to expose internal state.
+
+All of these practice problems, algorithms, and data structures contain main methods which act as a simplified test driver. The main function of Test.java can be used to run every test across all files in the collection.
