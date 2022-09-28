@@ -11,7 +11,7 @@ Implementation of Sorting Algorithms (found together in [Sorts](https://github.c
 
 Implementation of Data Structures:
 * [Array List](https://github.com/bdunko/Practice/blob/master/src/datastructures/BArrayList.java)
-* [Linked List](https://github.com/bdunko/Practice/blob/master/src/datastructures/BLinkedList.java)
+* [Linked List (with Iterator!)](https://github.com/bdunko/Practice/blob/master/src/datastructures/BLinkedList.java)
 * [Deque (Combined Stack + Queue)](https://github.com/bdunko/Practice/blob/master/src/datastructures/BDeque.java)
 * [Binary Search Tree](https://github.com/bdunko/Practice/blob/master/src/datastructures/BBinarySearchTree.java)
 * [Bit Array](https://github.com/bdunko/Practice/blob/master/src/datastructures/BBitArray.java)
