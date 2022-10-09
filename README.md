@@ -1,6 +1,6 @@
 # Practice
 
-This is a collection of practice interview problems and solutions.
+This is a collection of practice interview problems and solutions. Specifically, it is a collection of solutions to almost every problem in Cracking the Coding Interview, with a few other tidbits included.
 
 Implementation of Sorting Algorithms (found together in [Sorts](https://github.com/bdunko/Practice/blob/master/src/sortsearch/Sorts.java)):
 * Insertion Sort
