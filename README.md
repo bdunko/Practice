@@ -14,6 +14,7 @@ Implementation of Data Structures:
 * [Linked List (with Iterator!)](https://github.com/bdunko/Practice/blob/master/src/datastructures/BLinkedList.java)
 * [Deque (Combined Stack + Queue)](https://github.com/bdunko/Practice/blob/master/src/datastructures/BDeque.java)
 * [Binary Search Tree](https://github.com/bdunko/Practice/blob/master/src/datastructures/BBinarySearchTree.java)
+* [HashMap](https://github.com/bdunko/Practice/blob/master/src/datastructures/BHashMap.java)
 * [Bit Array](https://github.com/bdunko/Practice/blob/master/src/datastructures/BBitArray.java)
 * [Min Heap](https://github.com/bdunko/Practice/blob/master/src/datastructures/BMinHeap.java) / [Max Heap](https://github.com/bdunko/Practice/blob/master/src/datastructures/BMaxHeap.java)
 * [Directed Graph](https://github.com/bdunko/Practice/blob/master/src/datastructures/BGraph.java)
